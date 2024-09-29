@@ -2,19 +2,21 @@ package com.app.backend;
 
 public class Movie
 {
-	private String title, imagePath, titleImagePath, trailerId, moviePath;
+	private String title, imagePath, titleImagePath, trailerId, wistiaMovieEmbedCode, gDriveMovieEmbedCode, localMoviePath;
 	private int popularity;
 	
 	// Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy, History, Horror, Music, Mystery, Romance, Science Fiction, TV movie, Thriller, War, Western
 	private int[] genres = new int[19];
 	
-	public Movie(String title, String imagePath, String titleImagePath, String trailerId, String moviePath, int popularity, int[] genres)
+	public Movie(String title, String imagePath, String titleImagePath, String trailerId, String wistiaMovieEmbedCode, String gDriveMovieEmbedCode, String localMoviePath, int popularity, int[] genres)
 	{
 		this.title = title;
 		this.imagePath = imagePath;
 		this.titleImagePath = titleImagePath;
 		this.trailerId = trailerId;
-		this.moviePath = moviePath;
+		this.wistiaMovieEmbedCode = wistiaMovieEmbedCode;
+		this.gDriveMovieEmbedCode = gDriveMovieEmbedCode;
+		this.localMoviePath = localMoviePath;
 		this.popularity = popularity;
 		this.genres = genres;
 	}
@@ -39,9 +41,19 @@ public class Movie
 		return this.trailerId;
 	}
 	
-	public String getMoviePath()
+	public String getWistiaMovieEmbedCode()
 	{
-		return this.moviePath;
+		return this.wistiaMovieEmbedCode;
+	}
+	
+	public String getGDriveMovieEmbedCode()
+	{
+		return this.gDriveMovieEmbedCode;
+	}
+	
+	public String getLocalMoviePath()
+	{
+		return this.localMoviePath;
 	}
 	
 	public int getPopularity()
@@ -74,9 +86,19 @@ public class Movie
 		this.trailerId = trailerId;
 	}
 	
-	public void setMoviePath(String moviePath)
+	public void setWistiaMovieEmbedCode(String wistiaMovieEmbedCode)
 	{
-		this.moviePath = moviePath;
+		this.wistiaMovieEmbedCode = wistiaMovieEmbedCode;
+	}
+	
+	public void setGDriveMovieEmbedCode(String gDriveMovieEmbedCode)
+	{
+		this.gDriveMovieEmbedCode = gDriveMovieEmbedCode;
+	}
+	
+	public void setLocalMoviePath(String localMoviePath)
+	{
+		this.localMoviePath = localMoviePath;
 	}
 	
 	public void setPopularity(int popularity)
