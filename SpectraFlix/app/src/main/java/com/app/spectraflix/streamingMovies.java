@@ -1,4 +1,4 @@
-package com.app.backend;
+package com.app.spectraflix;
 
 import java.util.List;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.app.backend;
+package com.app.spectraflix;
 
 public class Movie
 {
