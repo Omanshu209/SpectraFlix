@@ -16,7 +16,7 @@ public class Movie
 		this.trailerId = trailerId;
 		this.resImagePath = resImagePath;
 		this.resTitleImagePath = resTitleImagePath;
-		this.description = dewcription;
+		this.description = description;
 		this.wistiaMovieEmbedCode = wistiaMovieEmbedCode;
 		this.gDriveMovieEmbedCode = gDriveMovieEmbedCode;
 		this.localMoviePath = localMoviePath;
