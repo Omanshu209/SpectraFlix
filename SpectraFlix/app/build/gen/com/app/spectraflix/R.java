@@ -52,14 +52,17 @@ public final class R {
     }
     public static final class id {
         public static final int animated_movies_scroll_view=0x7f060005;
-        public static final int category_label=0x7f060003;
-        public static final int developers_choice_scroll_view=0x7f060008;
+        public static final int category_label_1=0x7f060003;
+        public static final int category_label_2=0x7f060006;
+        public static final int category_label_3=0x7f060008;
+        public static final int category_label_4=0x7f06000a;
+        public static final int developers_choice_scroll_view=0x7f06000b;
         public static final int horizontalScrollView=0x7f060004;
-        public static final int horror_movies_scroll_view=0x7f060007;
+        public static final int horror_movies_scroll_view=0x7f060009;
         public static final int icon_button1=0x7f060000;
         public static final int icon_button2=0x7f060001;
         public static final int icon_button3=0x7f060002;
-        public static final int popular_movies_scroll_view=0x7f060006;
+        public static final int popular_movies_scroll_view=0x7f060007;
     }
     public static final class layout {
         public static final int activity2=0x7f030000;

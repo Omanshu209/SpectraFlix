@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.view.Gravity;
+import android.graphics.Typeface;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -27,6 +29,20 @@ public class MainActivity extends Activity
 		
 		if(actionBar != null)
 			actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ACD5C2")));
+		
+		Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/nasalization.ttf");
+		
+		TextView textView1 = findViewById(R.id.category_label_1);
+		textView1.setTypeface(customFont);
+		
+		TextView textView2 = findViewById(R.id.category_label_2);
+		textView2.setTypeface(customFont);
+		
+		TextView textView3 = findViewById(R.id.category_label_3);
+		textView3.setTypeface(customFont);
+		
+		TextView textView4 = findViewById(R.id.category_label_4);
+		textView4.setTypeface(customFont);
 		
 		ImageButton button2 = findViewById(R.id.icon_button2);
 		button2.setOnClickListener(new View.OnClickListener()

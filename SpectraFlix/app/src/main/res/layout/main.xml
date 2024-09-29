@@ -33,14 +33,13 @@
 			>
 			
 				<TextView
-					android:id = "@+id/category_label"
+					android:id = "@+id/category_label_1"
 					android:layout_width = "match_parent"
 					android:layout_height = "70dp"
 					android:text = "Animated Movies"
 					android:textColor = "@android:color/white"
-					android:textSize = "40sp"
+					android:textSize = "30sp"
 					android:textStyle = "bold"
-					android:fontFamily = "sans-seriff-medium"
 					android:paddingStart = "16dp"
 					android:paddingEnd = "16dp"
 					android:paddingTop = "8dp"
@@ -77,14 +76,13 @@
 				</HorizontalScrollView>
 				
 				<TextView
-					android:id = "@+id/category_label"
+					android:id = "@+id/category_label_2"
 					android:layout_width = "match_parent"
 					android:layout_height = "70dp"
 					android:text = "Popular Movies"
 					android:textColor = "@android:color/white"
-					android:textSize = "40sp"
+					android:textSize = "30sp"
 					android:textStyle = "bold"
-					android:fontFamily = "sans-seriff-medium"
 					android:paddingStart = "16dp"
 					android:paddingEnd = "16dp"
 					android:paddingTop = "8dp"
@@ -121,14 +119,13 @@
 				</HorizontalScrollView>
 				
 				<TextView
-					android:id = "@+id/category_label"
+					android:id = "@+id/category_label_3"
 					android:layout_width = "match_parent"
 					android:layout_height = "70dp"
 					android:text = "Horror Movies"
 					android:textColor = "@android:color/white"
-					android:textSize = "40sp"
+					android:textSize = "30sp"
 					android:textStyle = "bold"
-					android:fontFamily = "sans-seriff-medium"
 					android:paddingStart = "16dp"
 					android:paddingEnd = "16dp"
 					android:paddingTop = "8dp"
@@ -165,14 +162,13 @@
 				</HorizontalScrollView>
 				
 				<TextView
-					android:id = "@+id/category_label"
+					android:id = "@+id/category_label_4"
 					android:layout_width = "match_parent"
 					android:layout_height = "70dp"
 					android:text = "Developer's Choice"
 					android:textColor = "@android:color/white"
-					android:textSize = "40sp"
+					android:textSize = "30sp"
 					android:textStyle = "bold"
-					android:fontFamily = "sans-seriff-medium"
 					android:paddingStart = "16dp"
 					android:paddingEnd = "16dp"
 					android:paddingTop = "8dp"
