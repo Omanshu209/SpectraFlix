@@ -8,7 +8,7 @@ public class Movie
 	// Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy, History, Horror, Music, Mystery, Romance, Science Fiction, TV movie, Thriller, War, Western
 	private int[] genres = new int[19];
 	
-	public Movie(String title, String imagePath, int resImagePath, int resTitleImagePath, String titleImagePath, String trailerId, String wistiaMovieEmbedCode, String gDriveMovieEmbedCode, String localMoviePath, int popularity, String description, int[] genres)
+	public Movie(String title, String imagePath, String titleImagePath, int resImagePath, int resTitleImagePath, String trailerId, String wistiaMovieEmbedCode, String gDriveMovieEmbedCode, String localMoviePath, int popularity, String description, int[] genres)
 	{
 		this.title = title;
 		this.imagePath = imagePath;
