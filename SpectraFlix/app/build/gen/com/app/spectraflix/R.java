@@ -11,15 +11,54 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int icon1=0x7f020001;
-        public static final int icon2=0x7f020002;
-        public static final int icon3=0x7f020003;
+        public static final int annabelle_creation=0x7f020000;
+        public static final int annabelle_creation_title=0x7f020001;
+        public static final int bg=0x7f020002;
+        public static final int conjuring_2_title=0x7f020003;
+        public static final int free_guy=0x7f020004;
+        public static final int free_guy_title=0x7f020005;
+        public static final int frozen_2=0x7f020006;
+        public static final int frozen_2_title=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int icon1=0x7f020009;
+        public static final int icon2=0x7f02000a;
+        public static final int icon3=0x7f02000b;
+        public static final int interstellar=0x7f02000c;
+        public static final int interstellar_title=0x7f02000d;
+        public static final int kill=0x7f02000e;
+        public static final int kill_title=0x7f02000f;
+        public static final int moana=0x7f020010;
+        public static final int moana_title=0x7f020011;
+        public static final int oppenheimer=0x7f020012;
+        public static final int oppenheimer_title=0x7f020013;
+        public static final int ralph_breaks_the_internet=0x7f020014;
+        public static final int ralph_breaks_the_internet_title=0x7f020015;
+        public static final int rrr=0x7f020016;
+        public static final int rrr_title=0x7f020017;
+        public static final int srikanth=0x7f020018;
+        public static final int srikanth_title=0x7f020019;
+        public static final int the_boy_in_the_striped_pyjamas=0x7f02001a;
+        public static final int the_boy_in_the_striped_pyjamas_title=0x7f02001b;
+        public static final int the_conjuring=0x7f02001c;
+        public static final int the_conjuring_2=0x7f02001d;
+        public static final int the_conjuring_title=0x7f02001e;
+        public static final int the_nun_2=0x7f02001f;
+        public static final int the_nun_2_title=0x7f020020;
+        public static final int toy_story_3=0x7f020021;
+        public static final int toy_story_3_title=0x7f020022;
+        public static final int zootopia=0x7f020023;
+        public static final int zootopia_title=0x7f020024;
     }
     public static final class id {
+        public static final int animated_movies_scroll_view=0x7f060005;
+        public static final int category_label=0x7f060003;
+        public static final int developers_choice_scroll_view=0x7f060008;
+        public static final int horizontalScrollView=0x7f060004;
+        public static final int horror_movies_scroll_view=0x7f060007;
         public static final int icon_button1=0x7f060000;
         public static final int icon_button2=0x7f060001;
         public static final int icon_button3=0x7f060002;
+        public static final int popular_movies_scroll_view=0x7f060006;
     }
     public static final class layout {
         public static final int activity2=0x7f030000;

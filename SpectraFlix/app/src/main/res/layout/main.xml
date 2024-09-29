@@ -2,30 +2,213 @@
 
 <GridLayout
 	xmlns:android = "http://schemas.android.com/apk/res/android"
-    android:layout_width = "fill_parent"
-    android:layout_height = "fill_parent"
+	android:layout_width = "fill_parent"
+	android:layout_height = "fill_parent"
 	android:rowCount = "2"
 	android:columnCount = "1"
 	android:orientation = "horizontal"
 	android:layout_gravity = "fill"
 >
 
-	<LinearLayout
+	<LinearLayout 
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		android:layout_width = "match_parent"
 		android:layout_height = "0dp"
+		android:background = "@drawable/bg"
 		android:orientation = "vertical"
 		android:gravity = "center"
 		android:layout_rowWeight = "9"
 	>
-
-		<TextView
+		
+		<ScrollView
 			android:layout_width = "match_parent"
 			android:layout_height = "match_parent"
-			android:text = "SCREEN 1"
-			android:textSize = "40sp" 
-		/>
-
+		>
+		
+			<LinearLayout
+				android:layout_width = "wrap_content"
+				android:layout_height = "wrap_content"
+				android:gravity = "center"
+				android:orientation = "vertical"
+			>
+			
+				<TextView
+					android:id = "@+id/category_label"
+					android:layout_width = "match_parent"
+					android:layout_height = "70dp"
+					android:text = "Animated Movies"
+					android:textColor = "@android:color/white"
+					android:textSize = "40sp"
+					android:textStyle = "bold"
+					android:fontFamily = "sans-seriff-medium"
+					android:paddingStart = "16dp"
+					android:paddingEnd = "16dp"
+					android:paddingTop = "8dp"
+					android:paddingBottom = "8dp"
+					android:gravity = "start"
+					android:layout_marginBottom = "12dp"
+					android:letterSpacing = "0.05"
+					android:shadowColor = "@android:color/black"
+					android:shadowDx = "2"
+					android:shadowDy = "2"
+					android:shadowRadius = "3"
+				/>
+		
+				<HorizontalScrollView
+					android:id = "@+id/horizontalScrollView"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:layout_marginStart = "1dp"
+					android:layout_marginTop = "1dp"
+					android:layout_marginEnd = "1dp"
+					android:layout_marginBottom = "1dp"
+					android:foregroundGravity = "center_vertical"
+				> 
+					
+					<LinearLayout
+						android:id = "@+id/animated_movies_scroll_view"
+						android:layout_width = "wrap_content"
+						android:layout_height = "match_parent"
+						android:foregroundGravity = "center"
+						android:gravity = "center"
+						android:orientation = "horizontal"
+					/>
+			
+				</HorizontalScrollView>
+				
+				<TextView
+					android:id = "@+id/category_label"
+					android:layout_width = "match_parent"
+					android:layout_height = "70dp"
+					android:text = "Popular Movies"
+					android:textColor = "@android:color/white"
+					android:textSize = "40sp"
+					android:textStyle = "bold"
+					android:fontFamily = "sans-seriff-medium"
+					android:paddingStart = "16dp"
+					android:paddingEnd = "16dp"
+					android:paddingTop = "8dp"
+					android:paddingBottom = "8dp"
+					android:gravity = "start"
+					android:layout_marginBottom = "12dp"
+					android:letterSpacing = "0.05"
+					android:shadowColor = "@android:color/black"
+					android:shadowDx = "2"
+					android:shadowDy = "2"
+					android:shadowRadius = "3"
+				/>
+		
+				<HorizontalScrollView
+					android:id = "@+id/horizontalScrollView"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:layout_marginStart = "1dp"
+					android:layout_marginTop = "1dp"
+					android:layout_marginEnd = "1dp"
+					android:layout_marginBottom = "1dp"
+					android:foregroundGravity = "center_vertical"
+				> 
+					
+					<LinearLayout
+						android:id = "@+id/popular_movies_scroll_view"
+						android:layout_width = "wrap_content"
+						android:layout_height = "match_parent"
+						android:foregroundGravity = "center"
+						android:gravity = "center"
+						android:orientation = "horizontal"
+					/>
+			
+				</HorizontalScrollView>
+				
+				<TextView
+					android:id = "@+id/category_label"
+					android:layout_width = "match_parent"
+					android:layout_height = "70dp"
+					android:text = "Horror Movies"
+					android:textColor = "@android:color/white"
+					android:textSize = "40sp"
+					android:textStyle = "bold"
+					android:fontFamily = "sans-seriff-medium"
+					android:paddingStart = "16dp"
+					android:paddingEnd = "16dp"
+					android:paddingTop = "8dp"
+					android:paddingBottom = "8dp"
+					android:gravity = "start"
+					android:layout_marginBottom = "12dp"
+					android:letterSpacing = "0.05"
+					android:shadowColor = "@android:color/black"
+					android:shadowDx = "2"
+					android:shadowDy = "2"
+					android:shadowRadius = "3"
+				/>
+		
+				<HorizontalScrollView
+					android:id = "@+id/horizontalScrollView"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:layout_marginStart = "1dp"
+					android:layout_marginTop = "1dp"
+					android:layout_marginEnd = "1dp"
+					android:layout_marginBottom = "1dp"
+					android:foregroundGravity = "center_vertical"
+				> 
+					
+					<LinearLayout
+						android:id = "@+id/horror_movies_scroll_view"
+						android:layout_width = "wrap_content"
+						android:layout_height = "match_parent"
+						android:foregroundGravity = "center"
+						android:gravity = "center"
+						android:orientation = "horizontal"
+					/>
+			
+				</HorizontalScrollView>
+				
+				<TextView
+					android:id = "@+id/category_label"
+					android:layout_width = "match_parent"
+					android:layout_height = "70dp"
+					android:text = "Developer's Choice"
+					android:textColor = "@android:color/white"
+					android:textSize = "40sp"
+					android:textStyle = "bold"
+					android:fontFamily = "sans-seriff-medium"
+					android:paddingStart = "16dp"
+					android:paddingEnd = "16dp"
+					android:paddingTop = "8dp"
+					android:paddingBottom = "8dp"
+					android:gravity = "start"
+					android:layout_marginBottom = "12dp"
+					android:letterSpacing = "0.05"
+					android:shadowColor = "@android:color/black"
+					android:shadowDx = "2"
+					android:shadowDy = "2"
+					android:shadowRadius = "3"
+				/>
+		
+				<HorizontalScrollView
+					android:id = "@+id/horizontalScrollView"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:layout_marginStart = "1dp"
+					android:layout_marginTop = "1dp"
+					android:layout_marginEnd = "1dp"
+					android:layout_marginBottom = "1dp"
+					android:foregroundGravity = "center_vertical"
+				> 
+					
+					<LinearLayout
+						android:id = "@+id/developers_choice_scroll_view"
+						android:layout_width = "wrap_content"
+						android:layout_height = "match_parent"
+						android:foregroundGravity = "center"
+						android:gravity = "center"
+						android:orientation = "horizontal"
+					/>
+			
+				</HorizontalScrollView>
+			</LinearLayout>
+		</ScrollView>
 	</LinearLayout>
 
 	<GridLayout
@@ -49,7 +232,7 @@
 			android:background = "?android:attr/selectableItemBackgroundBorderless"
 			android:contentDescription = "Icon button"
 			android:scaleType = "centerInside"
-            android:padding = "8dp"
+			android:padding = "8dp"
 		/>
 
 		<ImageButton
@@ -61,7 +244,7 @@
 			android:background = "?android:attr/selectableItemBackgroundBorderless"
 			android:contentDescription = "Icon button"
 			android:scaleType = "centerInside"
-            android:padding = "8dp"
+			android:padding = "8dp"
 		/>
 
 		<ImageButton
@@ -73,7 +256,7 @@
 			android:background = "?android:attr/selectableItemBackgroundBorderless"
 			android:contentDescription = "Icon button"
 			android:scaleType = "centerInside"
-            android:padding = "8dp"
+			android:padding = "8dp"
 		/>
 
 	</GridLayout>
