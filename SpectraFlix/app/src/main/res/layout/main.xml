@@ -35,7 +35,7 @@
 				<TextView
 					android:id = "@+id/category_label_1"
 					android:layout_width = "match_parent"
-					android:layout_height = "70dp"
+					android:layout_height = "wrap_content"
 					android:text = "Animated Movies"
 					android:textColor = "@android:color/white"
 					android:textSize = "30sp"
@@ -78,7 +78,7 @@
 				<TextView
 					android:id = "@+id/category_label_2"
 					android:layout_width = "match_parent"
-					android:layout_height = "70dp"
+					android:layout_height = "wrap_content"
 					android:text = "Popular Movies"
 					android:textColor = "@android:color/white"
 					android:textSize = "30sp"
@@ -121,7 +121,7 @@
 				<TextView
 					android:id = "@+id/category_label_3"
 					android:layout_width = "match_parent"
-					android:layout_height = "70dp"
+					android:layout_height = "wrap_content"
 					android:text = "Horror Movies"
 					android:textColor = "@android:color/white"
 					android:textSize = "30sp"
@@ -164,7 +164,7 @@
 				<TextView
 					android:id = "@+id/category_label_4"
 					android:layout_width = "match_parent"
-					android:layout_height = "70dp"
+					android:layout_height = "wrap_content"
 					android:text = "Developer's Choice"
 					android:textColor = "@android:color/white"
 					android:textSize = "30sp"
