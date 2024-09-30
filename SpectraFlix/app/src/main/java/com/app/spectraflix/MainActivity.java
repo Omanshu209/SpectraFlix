@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.view.Gravity;
 import android.graphics.Typeface;
 import android.widget.TextView;
+import android.util.DisplayMetrics;
 
 import java.util.List;
 
@@ -117,12 +118,16 @@ public class MainActivity extends Activity
 		List<Movie>[] moviesList = {animatedMovies, popularMovies, horrorMovies, developersChoiceMovies};
 		int[] scrollViews = {R.id.animated_movies_scroll_view, R.id.popular_movies_scroll_view, R.id.horror_movies_scroll_view, R.id.developers_choice_scroll_view};
 		
+		DisplayMetrics displayMetrics = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+		int width = displayMetrics.widthPixels;
+		
 		for(int i = 0 ; i < 4 ; i++)
 			for(Movie mov : moviesList[i])
-				addStreamingMovie(scrollViews[i], mov.getResTitleImagePath(), mov.getResImagePath());
+				addStreamingMovie(scrollViews[i], mov.getResTitleImagePath(), mov.getResImagePath(), width);
 	}
 	
-	public void addStreamingMovie(int scrollView, int resMovieTitlePath, int resMoviePosterPath)
+	public void addStreamingMovie(int scrollView, int resMovieTitlePath, int resMoviePosterPath, int width)
 	{
 		LinearLayout parentLayout = findViewById(scrollView);
 
@@ -142,11 +147,12 @@ public class MainActivity extends Activity
 
 		ImageView moviePosterView = new ImageView(this);
 		LinearLayout.LayoutParams moviePosterParams = new LinearLayout.LayoutParams(
-			LinearLayout.LayoutParams.WRAP_CONTENT, 400);
+			(int) Math.round(width * 0.75), 400);
 		moviePosterParams.gravity = Gravity.CENTER;
 		moviePosterView.setLayoutParams(moviePosterParams);
 		moviePosterView.setImageResource(resMoviePosterPath);
 		moviePosterView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+		moviePosterView.setPadding((int) Math.round(width * 0.05), 0, (int) Math.round(width * 0.05), 0);
 
 		ImageButton imageButton = new ImageButton(this);
 		LinearLayout.LayoutParams buttonParams = new LinearLayout.LayoutParams(100, 75);
