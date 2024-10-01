@@ -49,7 +49,7 @@ public class Movie
 		return this.resTitleImagePath;
 	}
 	
-	public String description()
+	public String getDescription()
 	{
 		return this.description;
 	}

@@ -24,6 +24,7 @@
         
         </activity>
 		
+		<activity android:name = ".PreviewActivity" />
 		<activity android:name = ".activity2" />
 		<activity android:name = ".activity3" />
 		

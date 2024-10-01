@@ -48,14 +48,14 @@ public class MainActivity extends Activity
 		ImageButton button2 = findViewById(R.id.icon_button2);
 		button2.setOnClickListener(new View.OnClickListener()
 		{
-				@Override
-				public void onClick(View v)
-				{
-					Intent intent = new Intent();
-					intent.setClass(getApplicationContext(), activity2.class);
-					startActivity(intent);
-					overridePendingTransition(0, 0);
-				}
+			@Override
+			public void onClick(View v)
+			{
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), activity2.class);
+				startActivity(intent);
+				overridePendingTransition(0, 0);
+			}
 		});
 		
 		ImageButton button3 = findViewById(R.id.icon_button3);
@@ -71,22 +71,22 @@ public class MainActivity extends Activity
 			}
 		});
 		
-		Movie mov1 = new Movie("Moana", "", "", R.drawable.moana, R.drawable.moana_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov2 = new Movie("Zootopia", "", "", R.drawable.zootopia, R.drawable.zootopia_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov3 = new Movie("Toy Story 3", "", "", R.drawable.toy_story_3, R.drawable.toy_story_3_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov4 = new Movie("Frozen II", "", "", R.drawable.frozen_2, R.drawable.frozen_2_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov5 = new Movie("Oppenheimer", "", "", R.drawable.oppenheimer, R.drawable.oppenheimer_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov6 = new Movie("Free Guy", "", "", R.drawable.free_guy, R.drawable.free_guy_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov7 = new Movie("Kill", "", "", R.drawable.kill, R.drawable.kill_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov8 = new Movie("Srikanth", "", "", R.drawable.srikanth, R.drawable.srikanth_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov9 = new Movie("The Conjuring", "", "", R.drawable.the_conjuring, R.drawable.the_conjuring_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov10 = new Movie("The Conjuring 2", "", "", R.drawable.the_conjuring_2, R.drawable.the_conjuring_2_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov11 = new Movie("Annabelle Creation", "", "", R.drawable.annabelle_creation, R.drawable.annabelle_creation_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov12 = new Movie("The Nun II", "", "", R.drawable.the_nun_2, R.drawable.the_nun_2_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov13 = new Movie("Interstellar", "", "", R.drawable.interstellar, R.drawable.interstellar_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov14 = new Movie("The Boy In The Striped Pyjamas", "", "", R.drawable.the_boy_in_the_striped_pyjamas, R.drawable.the_boy_in_the_striped_pyjamas_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov15 = new Movie("RRR", "", "", R.drawable.rrr, R.drawable.rrr_title, "", "", "", "", 0, "", new int[19]);
-		Movie mov16 = new Movie("Ralph Breaks The Internet", "", "", R.drawable.ralph_breaks_the_internet, R.drawable.ralph_breaks_the_internet_title, "", "", "", "", 0, "", new int[19]);
+		Movie mov1 = new Movie("Moana", "", "", R.drawable.moana, R.drawable.moana_title, "", "", "", "", 0, "Moana, daughter of chief Tui, embarks on a journey to return the heart of goddess Te Fitti from Maui, a demigod, after the plants and the fish on her island start dying due to a blight.", new int[19]);
+		Movie mov2 = new Movie("Zootopia", "", "", R.drawable.zootopia, R.drawable.zootopia_title, "", "", "", "", 0, "When Judy Hopps, a rookie officer in the Zootopia Police Department, sniffs out a sinister plot, she enlists the help of a con artist to solve the case in order to prove her abilities to Chief Bogo.", new int[19]);
+		Movie mov3 = new Movie("Toy Story 3", "", "", R.drawable.toy_story_3, R.drawable.toy_story_3_title, "", "", "", "", 0, "Before Andy leaves for college, his toys are mistakenly delivered to a day care centre. Woody convinces the other toys that they were not dumped and leads them on an expedition back home.", new int[19]);
+		Movie mov4 = new Movie("Frozen II", "", "", R.drawable.frozen_2, R.drawable.frozen_2_title, "", "", "", "", 0, "Three years after her coronation when Elsa celebrates Autumn, she hears a mysterious voice. She follows that voice along with Anna and their friends as they are forced to uncover the truth.", new int[19]);
+		Movie mov5 = new Movie("Oppenheimer", "", "", R.drawable.oppenheimer, R.drawable.oppenheimer_title, "", "", "", "", 0, "During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first nuclear explosion, forever changing the course of history.", new int[19]);
+		Movie mov6 = new Movie("Free Guy", "", "", R.drawable.free_guy, R.drawable.free_guy_title, "", "", "", "", 0, "Guy lives a seemingly peaceful life as a bank teller. However, an encounter with a pretty but mysterious woman makes him realise that he is a non-playable character in a massive online video game.", new int[19]);
+		Movie mov7 = new Movie("Kill", "", "", R.drawable.kill, R.drawable.kill_title, "", "", "", "", 0, "A train to New Delhi becomes a combat battleground as a pair of commandos faces off against an army of invading bandits.", new int[19]);
+		Movie mov8 = new Movie("Srikanth", "", "", R.drawable.srikanth, R.drawable.srikanth_title, "", "", "", "", 0, "In a world where the odds are against him, Srikanth defies the norms and makes his way from rural India to becoming the first visually impaired student at MIT.", new int[19]);
+		Movie mov9 = new Movie("The Conjuring", "", "", R.drawable.the_conjuring, R.drawable.the_conjuring_title, "", "", "", "", 0, "Rod and Carolyn find their pet dog dead under mysterious circumstances and experience a spirit that harms their daughter Andrea. They finally call investigators who can help them get out of the mess.", new int[19]);
+		Movie mov10 = new Movie("The Conjuring 2", "", "", R.drawable.the_conjuring_2, R.drawable.the_conjuring_2_title, "", "", "", "", 0, "Peggy, a single mother of four children, seeks the help of occult investigators Ed and Lorraine Warren when she and her children witness strange, paranormal events in their house.", new int[19]);
+		Movie mov11 = new Movie("Annabelle Creation", "", "", R.drawable.annabelle_creation, R.drawable.annabelle_creation_title, "", "", "", "", 0, "A doll-maker and his wife embed the spirit of their deceased daughter inside a doll. Years later, a nun and several girls from a shuttered orphanage become victims of the possessed doll, Anabelle.", new int[19]);
+		Movie mov12 = new Movie("The Nun II", "", "", R.drawable.the_nun_2, R.drawable.the_nun_2_title, "", "", "", "", 0, "In 1956 France, a priest is murdered, and it seems an evil is spreading. Sister Irene once again comes face to face with a demonic force.", new int[19]);
+		Movie mov13 = new Movie("Interstellar", "", "", R.drawable.interstellar, R.drawable.interstellar_title, "", "", "", "", 0, "When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.", new int[19]);
+		Movie mov14 = new Movie("The Boy In The Striped Pyjamas", "", "", R.drawable.the_boy_in_the_striped_pyjamas, R.drawable.the_boy_in_the_striped_pyjamas_title, "", "", "", "", 0, "Bruno, the son of a Nazi commander, meets Shmuel, a Jewish boy living in a concentration camp. Later, both the children become friends while being oblivious to the reality of the situation.", new int[19]);
+		Movie mov15 = new Movie("RRR", "", "", R.drawable.rrr, R.drawable.rrr_title, "", "", "", "", 0, "A fearless revolutionary and an officer in the British force, who once shared a deep bond, decide to join forces and chart out an inspirational path of freedom against the despotic rulers.", new int[19]);
+		Movie mov16 = new Movie("Ralph Breaks The Internet", "", "", R.drawable.ralph_breaks_the_internet, R.drawable.ralph_breaks_the_internet_title, "", "", "", "", 0, "On a quest to save the video game 'Sugar Rush' and to find a replacement, Ralph and his best friend Vanellope travel to the World Wide Web through a Wi-Fi router they find at the arcade.", new int[19]);
 		
 		streamingMovies categories = new streamingMovies();
 		
@@ -124,10 +124,10 @@ public class MainActivity extends Activity
 		
 		for(int i = 0 ; i < 4 ; i++)
 			for(Movie mov : moviesList[i])
-				addStreamingMovie(scrollViews[i], mov.getResTitleImagePath(), mov.getResImagePath(), width);
+				addStreamingMovie(scrollViews[i], mov.getResTitleImagePath(), mov.getResImagePath(), width, mov.getDescription());
 	}
 	
-	public void addStreamingMovie(int scrollView, int resMovieTitlePath, int resMoviePosterPath, int width)
+	public void addStreamingMovie(int scrollView, int resMovieTitlePath, int resMoviePosterPath, int width, String description)
 	{
 		LinearLayout parentLayout = findViewById(scrollView);
 
@@ -161,6 +161,22 @@ public class MainActivity extends Activity
 		imageButton.setImageResource(R.drawable.watching);
 		imageButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		imageButton.setBackground(null);
+		
+		final int titlePath = resMovieTitlePath, posterPath = resMoviePosterPath;
+		final String des = description;
+		imageButton.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				Intent intent = new Intent();
+				intent.putExtra("resMovieTitlePath", titlePath);
+				intent.putExtra("resMoviePosterPath", posterPath);
+				intent.putExtra("description", des);
+				intent.setClass(getApplicationContext(), PreviewActivity.class);
+				startActivity(intent);
+			}
+		});
 
 		newLayout.addView(movieTitleView);
 		newLayout.addView(moviePosterView);
