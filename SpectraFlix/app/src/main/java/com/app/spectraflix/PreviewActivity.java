@@ -118,24 +118,36 @@ public class PreviewActivity extends Activity
 		
 		relativeLayout.addView(trailerButton);
 		
-		ImageButton movieWebViewButton = findViewById(R.id.icon_button1);
-		final String movieEmbedCode = mov.getMovieEmbedCode();
-		movieWebViewButton.setOnClickListener(new View.OnClickListener()
+		int[] buttonIds = {R.id.icon_button1, R.id.icon_button2};
+		final String[] strIds = {"MovieEmbedCode", "MovieURL"};
+		final String[] strData = {mov.getMovieEmbedCode(), mov.getMovieURL()};
+		final Class<?>[] classes = new Class<?>[] {
+			MovieWebView.class, 
+			MovieURLView.class
+		};
+		
+		for(int i = 0 ; i < 2 ; i++)
 		{
-			@Override
-			public void onClick(View v)
+			ImageButton button = findViewById(buttonIds[i]);
+			final String movieStr = strData[i];
+			final int k = i;
+			button.setOnClickListener(new View.OnClickListener()
 			{
-				if(movieEmbedCode.equals("") || movieEmbedCode.equals(null))
-					Toast.makeText(getApplicationContext(), "MOVIE NOT AVAILABLE!", Toast.LENGTH_SHORT).show();
-				
-				else
+				@Override
+				public void onClick(View v)
 				{
-					Intent intent = new Intent();
-					intent.putExtra("MovieEmbedCode", movieEmbedCode);
-					intent.setClass(getApplicationContext(), MovieWebView.class);
-					startActivity(intent);
+					if(movieStr.equals("") || movieStr == null)
+						Toast.makeText(getApplicationContext(), "MOVIE NOT AVAILABLE!", Toast.LENGTH_SHORT).show();
+					
+					else
+					{
+						Intent intent = new Intent();
+						intent.putExtra(strIds[k], strData[k]);
+						intent.setClass(getApplicationContext(), classes[k]);
+						startActivity(intent);
+					}
 				}
-			}
-		});
+			});
+		}
     }
 }

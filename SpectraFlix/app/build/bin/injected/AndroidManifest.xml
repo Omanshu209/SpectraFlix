@@ -42,6 +42,9 @@
 			android:name=".MovieWebView"/>
 
 		<activity
+			android:name=".MovieURLView"/>
+
+		<activity
 			android:name=".activity2"/>
 
 		<activity

@@ -30,6 +30,7 @@
 		
 		<activity android:name = ".PreviewActivity" />
 		<activity android:name = ".MovieWebView" />
+		<activity android:name = ".MovieURLView" />
 		<activity android:name = ".activity2" />
 		<activity android:name = ".activity3" />
 		
