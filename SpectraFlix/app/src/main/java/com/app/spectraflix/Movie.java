@@ -1,14 +1,16 @@
 package com.app.spectraflix;
 
-public class Movie
+import java.io.Serializable;
+
+public class Movie implements Serializable
 {
-	private String title, imagePath, titleImagePath, trailerId, wistiaMovieEmbedCode, gDriveMovieEmbedCode, localMoviePath, description;
+	private String title, imagePath, titleImagePath, trailerId, gDriveMovieID, movieURL, description;
 	private int popularity, resImagePath, resTitleImagePath;
 	
 	// Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy, History, Horror, Music, Mystery, Romance, Science Fiction, TV movie, Thriller, War, Western
 	private int[] genres = new int[19];
 	
-	public Movie(String title, String imagePath, String titleImagePath, int resImagePath, int resTitleImagePath, String trailerId, String wistiaMovieEmbedCode, String gDriveMovieEmbedCode, String localMoviePath, int popularity, String description, int[] genres)
+	public Movie(String title, String imagePath, String titleImagePath, int resImagePath, int resTitleImagePath, String trailerId, String gDriveMovieID, String movieURL, int popularity, String description, int[] genres)
 	{
 		this.title = title;
 		this.imagePath = imagePath;
@@ -17,9 +19,8 @@ public class Movie
 		this.resImagePath = resImagePath;
 		this.resTitleImagePath = resTitleImagePath;
 		this.description = description;
-		this.wistiaMovieEmbedCode = wistiaMovieEmbedCode;
-		this.gDriveMovieEmbedCode = gDriveMovieEmbedCode;
-		this.localMoviePath = localMoviePath;
+		this.gDriveMovieID = gDriveMovieID;
+		this.movieURL = movieURL;
 		this.popularity = popularity;
 		this.genres = genres;
 	}
@@ -59,19 +60,14 @@ public class Movie
 		return this.trailerId;
 	}
 	
-	public String getWistiaMovieEmbedCode()
+	public String getGDriveMovieID()
 	{
-		return this.wistiaMovieEmbedCode;
+		return this.gDriveMovieID;
 	}
 	
-	public String getGDriveMovieEmbedCode()
+	public String getMovieURL()
 	{
-		return this.gDriveMovieEmbedCode;
-	}
-	
-	public String getLocalMoviePath()
-	{
-		return this.localMoviePath;
+		return this.movieURL;
 	}
 	
 	public int getPopularity()
@@ -119,19 +115,14 @@ public class Movie
 		this.trailerId = trailerId;
 	}
 	
-	public void setWistiaMovieEmbedCode(String wistiaMovieEmbedCode)
+	public void setGDriveMovieID(String gDriveMovieID)
 	{
-		this.wistiaMovieEmbedCode = wistiaMovieEmbedCode;
+		this.gDriveMovieID = gDriveMovieID;
 	}
 	
-	public void setGDriveMovieEmbedCode(String gDriveMovieEmbedCode)
+	public void setMovieURL(String movieURL)
 	{
-		this.gDriveMovieEmbedCode = gDriveMovieEmbedCode;
-	}
-	
-	public void setLocalMoviePath(String localMoviePath)
-	{
-		this.localMoviePath = localMoviePath;
+		this.movieURL = movieURL;
 	}
 	
 	public void setPopularity(int popularity)

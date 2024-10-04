@@ -15,6 +15,7 @@ import android.app.Activity;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class PreviewActivity extends Activity 
 {
@@ -24,14 +25,11 @@ public class PreviewActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.preview);
 		
-		if (getActionBar() != null) {
+		if (getActionBar() != null)
             getActionBar().hide();
-        }
         
         Intent intent = getIntent();
-        int resMovieTitlePath = intent.getIntExtra("resMovieTitlePath", R.drawable.ic_launcher);
-        int resMoviePosterPath = intent.getIntExtra("resMoviePosterPath", R.drawable.ic_launcher);
-        String description = intent.getStringExtra("description");
+        Movie mov = (Movie) intent.getSerializableExtra("Movie");
 		
 		Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/nasalization.ttf");
 		
@@ -61,7 +59,6 @@ public class PreviewActivity extends Activity
 				Intent intent = new Intent();
 				intent.setClass(getApplicationContext(), MainActivity.class);
 				startActivity(intent);
-				overridePendingTransition(0, 0);
 			}
 		});
 		
@@ -79,16 +76,16 @@ public class PreviewActivity extends Activity
 		LinearLayout.LayoutParams movieTitleParams = new LinearLayout.LayoutParams(width / 3, height / 4);
 		movieTitleParams.gravity = Gravity.CENTER;
 		movieTitleView.setLayoutParams(movieTitleParams);
-		movieTitleView.setImageResource(resMovieTitlePath);
+		movieTitleView.setImageResource(mov.getResTitleImagePath());
 		movieTitleView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		
 		ImageView bgImage = findViewById(R.id.background_image);
-		bgImage.setImageResource(resMoviePosterPath);
+		bgImage.setImageResource(mov.getResImagePath());
 
         ScrollView scrollView = new ScrollView(this);
 
         TextView textView = new TextView(this);
-        textView.setText(description);
+        textView.setText(mov.getDescription());
 		textView.setTypeface(customFont);
         textView.setTextSize(18);
 		textView.setBackgroundResource(R.drawable.rounded_textview);
@@ -120,5 +117,25 @@ public class PreviewActivity extends Activity
 		trailerButton.setBackground(null);
 		
 		relativeLayout.addView(trailerButton);
+		
+		ImageButton gDriveButton = findViewById(R.id.icon_button1);
+		final String movieID = mov.getGDriveMovieID();
+		gDriveButton.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				if(movieID.equals("") || movieID.equals(null))
+					Toast.makeText(getApplicationContext(), "MOVIE NOT AVAILABLE!", Toast.LENGTH_SHORT).show();
+				
+				else
+				{
+					Intent intent = new Intent();
+					intent.putExtra("MovieID", movieID);
+					intent.setClass(getApplicationContext(), GDriveMovieWebView.class);
+					startActivity(intent);
+				}
+			}
+		});
     }
 }
