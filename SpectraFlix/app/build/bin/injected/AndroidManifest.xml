@@ -39,7 +39,7 @@
 			android:name=".PreviewActivity"/>
 
 		<activity
-			android:name=".GDriveMovieWebView"/>
+			android:name=".MovieWebView"/>
 
 		<activity
 			android:name=".activity2"/>

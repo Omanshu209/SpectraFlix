@@ -50,27 +50,37 @@
 		<GridLayout
 			android:layout_width = "match_parent"
 			android:layout_height = "fill_parent"
-			android:orientation = "horizontal"
-			android:rowCount = "1"
-			android:columnCount = "2"
+			android:orientation = "vertical"
+			android:rowCount = "3"
+			android:columnCount = "1"
 		>
 		
 			<ImageButton
 				android:id = "@+id/icon_button1"
-				android:layout_height = "match_parent"
-				android:layout_width = "0dp"
-				android:layout_columnWeight = "1"
-				android:src = "@drawable/gdrive"
+				android:layout_width = "match_parent"
+				android:layout_height = "0dp"
+				android:layout_rowWeight = "1"
+				android:src = "@drawable/embed_movie"
+				android:scaleType = "fitCenter"
+				android:background = "@null"
+			/>
+			
+			<ImageButton
+				android:id = "@+id/icon_button2"
+				android:layout_width = "match_parent"
+				android:layout_height = "0dp"
+				android:layout_rowWeight = "1"
+				android:src = "@drawable/movie_url"
 				android:scaleType = "fitCenter"
 				android:background = "@null"
 			/>
 		
 			<ImageButton
-				android:id = "@+id/icon_button2"
-				android:layout_height = "match_parent"
-				android:layout_width = "0dp"
-				android:layout_columnWeight = "1"
-				android:src = "@drawable/movie_url"
+				android:id = "@+id/icon_button3"
+				android:layout_width = "match_parent"
+				android:layout_height = "0dp"
+				android:layout_rowWeight = "1"
+				android:src = "@drawable/local_path"
 				android:scaleType = "fitCenter"
 				android:background = "@null"
 			/>

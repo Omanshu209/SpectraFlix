@@ -29,7 +29,7 @@
         </activity>
 		
 		<activity android:name = ".PreviewActivity" />
-		<activity android:name = ".GDriveMovieWebView" />
+		<activity android:name = ".MovieWebView" />
 		<activity android:name = ".activity2" />
 		<activity android:name = ".activity3" />
 		

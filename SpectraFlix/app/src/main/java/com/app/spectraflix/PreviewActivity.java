@@ -65,7 +65,7 @@ public class PreviewActivity extends Activity
 		relativeLayout.addView(imageButton);
 		
         RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
-			width / 3,
+			width / 2,
 			height / 2
         );
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
@@ -97,8 +97,8 @@ public class PreviewActivity extends Activity
 		
 		LinearLayout buttonsLayout = findViewById(R.id.WatchMoviesLayout);
 		RelativeLayout.LayoutParams buttonsParams = new RelativeLayout.LayoutParams(
-			width / 2, 
-			height / 4
+			width / 4, 
+			height / 2
 		);
 		buttonsParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
         buttonsParams.addRule(RelativeLayout.ALIGN_PARENT_END);
@@ -118,21 +118,21 @@ public class PreviewActivity extends Activity
 		
 		relativeLayout.addView(trailerButton);
 		
-		ImageButton gDriveButton = findViewById(R.id.icon_button1);
-		final String movieID = mov.getGDriveMovieID();
-		gDriveButton.setOnClickListener(new View.OnClickListener()
+		ImageButton movieWebViewButton = findViewById(R.id.icon_button1);
+		final String movieEmbedCode = mov.getMovieEmbedCode();
+		movieWebViewButton.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
 			public void onClick(View v)
 			{
-				if(movieID.equals("") || movieID.equals(null))
+				if(movieEmbedCode.equals("") || movieEmbedCode.equals(null))
 					Toast.makeText(getApplicationContext(), "MOVIE NOT AVAILABLE!", Toast.LENGTH_SHORT).show();
 				
 				else
 				{
 					Intent intent = new Intent();
-					intent.putExtra("MovieID", movieID);
-					intent.setClass(getApplicationContext(), GDriveMovieWebView.class);
+					intent.putExtra("MovieEmbedCode", movieEmbedCode);
+					intent.setClass(getApplicationContext(), MovieWebView.class);
 					startActivity(intent);
 				}
 			}

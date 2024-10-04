@@ -4,13 +4,13 @@ import java.io.Serializable;
 
 public class Movie implements Serializable
 {
-	private String title, imagePath, titleImagePath, trailerId, gDriveMovieID, movieURL, description;
+	private String title, imagePath, titleImagePath, trailerId, movieEmbedCode, movieURL, localPath, description;
 	private int popularity, resImagePath, resTitleImagePath;
 	
 	// Action, Adventure, Animation, Comedy, Crime, Documentary, Drama, Family, Fantasy, History, Horror, Music, Mystery, Romance, Science Fiction, TV movie, Thriller, War, Western
 	private int[] genres = new int[19];
 	
-	public Movie(String title, String imagePath, String titleImagePath, int resImagePath, int resTitleImagePath, String trailerId, String gDriveMovieID, String movieURL, int popularity, String description, int[] genres)
+	public Movie(String title, String imagePath, String titleImagePath, int resImagePath, int resTitleImagePath, String trailerId, String movieEmbedCode, String movieURL, String localPath, int popularity, String description, int[] genres)
 	{
 		this.title = title;
 		this.imagePath = imagePath;
@@ -19,8 +19,9 @@ public class Movie implements Serializable
 		this.resImagePath = resImagePath;
 		this.resTitleImagePath = resTitleImagePath;
 		this.description = description;
-		this.gDriveMovieID = gDriveMovieID;
+		this.movieEmbedCode = movieEmbedCode;
 		this.movieURL = movieURL;
+		this.localPath = localPath;
 		this.popularity = popularity;
 		this.genres = genres;
 	}
@@ -60,9 +61,14 @@ public class Movie implements Serializable
 		return this.trailerId;
 	}
 	
-	public String getGDriveMovieID()
+	public String getMovieEmbedCode()
 	{
-		return this.gDriveMovieID;
+		return this.movieEmbedCode;
+	}
+	
+	public String getLocalPath()
+	{
+		return this.localPath;
 	}
 	
 	public String getMovieURL()
@@ -115,14 +121,19 @@ public class Movie implements Serializable
 		this.trailerId = trailerId;
 	}
 	
-	public void setGDriveMovieID(String gDriveMovieID)
+	public void setMovieEmbedCode(String movieEmbedCode)
 	{
-		this.gDriveMovieID = gDriveMovieID;
+		this.movieEmbedCode = movieEmbedCode;
 	}
 	
 	public void setMovieURL(String movieURL)
 	{
 		this.movieURL = movieURL;
+	}
+	
+	public void setLocalPath(String localPath)
+	{
+		this.localPath = localPath;
 	}
 	
 	public void setPopularity(int popularity)
