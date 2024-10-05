@@ -118,15 +118,16 @@ public class PreviewActivity extends Activity
 		
 		relativeLayout.addView(trailerButton);
 		
-		int[] buttonIds = {R.id.icon_button1, R.id.icon_button2};
-		final String[] strIds = {"MovieEmbedCode", "MovieURL"};
-		final String[] strData = {mov.getMovieEmbedCode(), mov.getMovieURL()};
+		int[] buttonIds = {R.id.icon_button1, R.id.icon_button2, R.id.icon_button3};
+		final String[] strIds = {"MovieEmbedCode", "MovieURL", "MoviePath"};
+		final String[] strData = {mov.getMovieEmbedCode(), mov.getMovieURL(), mov.getLocalPath()};
 		final Class<?>[] classes = new Class<?>[] {
 			MovieWebView.class, 
-			MovieURLView.class
+			MovieURLView.class, 
+			MovieLocalView.class
 		};
 		
-		for(int i = 0 ; i < 2 ; i++)
+		for(int i = 0 ; i < 3 ; i++)
 		{
 			ImageButton button = findViewById(buttonIds[i]);
 			final String movieStr = strData[i];

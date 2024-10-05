@@ -15,6 +15,8 @@ import android.view.Gravity;
 import android.graphics.Typeface;
 import android.widget.TextView;
 import android.util.DisplayMetrics;
+import android.Manifest;
+import android.content.pm.PackageManager;
 
 import java.util.List;
 
@@ -30,6 +32,9 @@ public class MainActivity extends Activity
 		
 		if(actionBar != null)
 			actionBar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ACD5C2")));
+		
+		if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+			requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1);
 		
 		Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/nasalization.ttf");
 		

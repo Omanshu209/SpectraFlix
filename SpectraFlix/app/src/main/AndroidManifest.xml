@@ -1,12 +1,17 @@
 <?xml version = "1.0" encoding = "utf-8"?>
 <manifest 
     xmlns:android = "http://schemas.android.com/apk/res/android"
-    package="com.app.spectraflix" 
+    package = "com.app.spectraflix" 
     >
     
     <uses-permission 
     	android:name = "android.permission.INTERNET" 
     />
+    
+    <uses-permission 
+    	android:name = "android.permission.READ_EXTERNAL_STORAGE"
+    />
+
 
     <application
         android:allowBackup = "true"
@@ -31,6 +36,7 @@
 		<activity android:name = ".PreviewActivity" />
 		<activity android:name = ".MovieWebView" />
 		<activity android:name = ".MovieURLView" />
+		<activity android:name = ".MovieLocalView" />
 		<activity android:name = ".activity2" />
 		<activity android:name = ".activity3" />
 		
