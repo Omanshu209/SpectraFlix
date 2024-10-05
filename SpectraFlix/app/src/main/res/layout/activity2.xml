@@ -14,17 +14,26 @@
 		xmlns:android = "http://schemas.android.com/apk/res/android"
 		android:layout_width = "match_parent"
 		android:layout_height = "0dp"
+		android:background = "@drawable/bg"
 		android:orientation = "vertical"
 		android:gravity = "center"
 		android:layout_rowWeight = "9"
 	>
 
-		<TextView
+		<ScrollView
 			android:layout_width = "match_parent"
 			android:layout_height = "match_parent"
-			android:text = "SCREEN 2"
-			android:textSize = "40sp" 
-		/>
+		>
+		
+			<LinearLayout
+				android:id = "@+id/ImageLinearLayout"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:gravity = "center"
+				android:orientation = "vertical"
+			/>
+		
+		</ScrollView>
 
 	</LinearLayout>
 
