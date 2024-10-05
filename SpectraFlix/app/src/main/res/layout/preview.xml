@@ -40,11 +40,12 @@
 			android:id = "@+id/watch_movie"
 			android:text = "Watch Movie"
 			android:textColor = "@android:color/white"
-			android:textSize = "30sp"
+			android:textSize = "20sp"
 			android:textStyle = "bold"
-			android:layout_width = "wrap_content"
+			android:layout_width = "match_parent"
 			android:layout_height = "wrap_content"
 			android:letterSpacing = "0.1"
+			android:gravity = "center"
 		/>
 	
 		<GridLayout
