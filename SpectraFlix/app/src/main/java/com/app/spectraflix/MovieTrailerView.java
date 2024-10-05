@@ -54,7 +54,7 @@ public class MovieTrailerView extends Activity
 		
 		Intent intent = getIntent();
 		String movieTrailerId = intent.getStringExtra("MovieTrailerId");
-		String trailerEmbedCode = "<iframe id=\"player\" type=\"text/html\" width=\"" + width + "\" height=\"" + height + "\" src=\"https://www.youtube.com/embed/" + movieTrailerId + "?enablejsapi=1\" frameborder=\"0\"></iframe>";
+		String trailerEmbedCode = "<iframe id=\"player\" type=\"text/html\" width=\"100%\" height=\"100%\" src=\"https://www.youtube.com/embed/" + movieTrailerId + "?enablejsapi=1\" frameborder=\"0\"></iframe>";
 
 		WebView webView = findViewById(R.id.webView);
 		WebSettings webSettings = webView.getSettings();
