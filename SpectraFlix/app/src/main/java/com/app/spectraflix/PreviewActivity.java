@@ -106,8 +106,8 @@ public class PreviewActivity extends Activity
 		
 		ImageButton trailerButton = new ImageButton(this);
 		RelativeLayout.LayoutParams trailerParams = new RelativeLayout.LayoutParams(
-			width / 8, 
-			height / 8
+			width / 6, 
+			height / 6
 		);
 		trailerParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
         trailerParams.addRule(RelativeLayout.ALIGN_PARENT_END);
@@ -115,6 +115,25 @@ public class PreviewActivity extends Activity
 		trailerButton.setImageResource(R.drawable.trailer);
 		trailerButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		trailerButton.setBackground(null);
+		
+		final String trailerId = mov.getTrailerId();
+		trailerButton.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				if(trailerId.equals("") || trailerId == null)
+					Toast.makeText(getApplicationContext(), "TRAILER NOT AVAILABLE!", Toast.LENGTH_SHORT).show();
+				
+				else
+				{
+					Intent intent = new Intent();
+					intent.putExtra("MovieTrailerId", trailerId);
+					intent.setClass(getApplicationContext(), MovieTrailerView.class);
+					startActivity(intent);
+				}
+			}
+		});
 		
 		relativeLayout.addView(trailerButton);
 		

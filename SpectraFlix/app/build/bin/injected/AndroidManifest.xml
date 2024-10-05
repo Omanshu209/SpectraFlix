@@ -51,6 +51,9 @@
 			android:name=".MovieLocalView"/>
 
 		<activity
+			android:name=".MovieTrailerView"/>
+
+		<activity
 			android:name=".activity2"/>
 
 		<activity
