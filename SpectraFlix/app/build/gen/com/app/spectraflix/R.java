@@ -81,6 +81,7 @@ public final class R {
         public static final int icon_button1=0x7f060001;
         public static final int icon_button2=0x7f060002;
         public static final int icon_button3=0x7f060003;
+        public static final int linearlayout=0x7f06001a;
         public static final int popular_movies_scroll_view=0x7f060010;
         public static final int runtimeSpinner=0x7f06000b;
         public static final int videoView=0x7f060015;
@@ -95,6 +96,7 @@ public final class R {
         public static final int movie_url_view=0x7f030004;
         public static final int movie_webview=0x7f030005;
         public static final int preview=0x7f030006;
+        public static final int select_seat=0x7f030007;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

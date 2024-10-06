@@ -155,7 +155,7 @@ public class EnterDetails extends Activity
 				Intent intent = new Intent();
 				intent.putExtra("Data", data);
 				intent.putExtra("BookableMovie", mov_final);
-				intent.setClass(getApplicationContext(), activity2.class);
+				intent.setClass(getApplicationContext(), SelectSeat.class);
 				startActivity(intent);
 			}
 		});

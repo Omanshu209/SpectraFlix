@@ -10,7 +10,7 @@ public class Cinema implements Serializable
 {
 	private String name;
 	private int[] seatRowCol;
-	private List<Runtime> runtimes = new LinkedList<Runtime>();
+	public List<Runtime> runtimes = new LinkedList<Runtime>();
 	
 	public Cinema(String name, int numSeats)
 	{

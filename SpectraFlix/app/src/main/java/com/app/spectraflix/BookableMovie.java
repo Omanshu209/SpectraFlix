@@ -8,7 +8,7 @@ public class BookableMovie implements Serializable
 {
 	private int resMovieTitlePath;
 	private String movieName, movieTitlePath;
-	private List<Cinema> cinemas = new LinkedList<Cinema>();
+	public List<Cinema> cinemas = new LinkedList<Cinema>();
 	
 	public BookableMovie(String movieName, int resMovieTitlePath, String movieTitlePath)
 	{

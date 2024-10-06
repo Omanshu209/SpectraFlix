@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 public class Runtime implements Serializable
 {
 	private LocalDateTime startDateTime, endDateTime;
-	private int[][] seats;
+	public int[][] seats;
 			
 	public Runtime(String startDateTime, String endDateTime, int[] rowCol)
 	{

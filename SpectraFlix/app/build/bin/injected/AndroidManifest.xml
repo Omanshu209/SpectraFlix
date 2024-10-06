@@ -51,6 +51,9 @@
 			android:name=".MovieLocalView"/>
 
 		<activity
+			android:name=".SelectSeat"/>
+
+		<activity
 			android:name=".MovieTrailerView"/>
 
 		<activity
