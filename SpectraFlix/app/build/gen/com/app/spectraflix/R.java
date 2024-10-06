@@ -58,33 +58,40 @@ public final class R {
     }
     public static final class id {
         public static final int ImageLinearLayout=0x7f060000;
-        public static final int LinearLayout=0x7f060011;
-        public static final int RelativeLayout=0x7f06000d;
-        public static final int WatchMoviesLayout=0x7f060012;
-        public static final int animated_movies_scroll_view=0x7f060006;
-        public static final int background_image=0x7f060010;
-        public static final int category_label_1=0x7f060004;
-        public static final int category_label_2=0x7f060007;
-        public static final int category_label_3=0x7f060009;
-        public static final int category_label_4=0x7f06000b;
-        public static final int developers_choice_scroll_view=0x7f06000c;
-        public static final int horizontalScrollView=0x7f060005;
-        public static final int horror_movies_scroll_view=0x7f06000a;
+        public static final int LinearLayout=0x7f060005;
+        public static final int RelativeLayout=0x7f060004;
+        public static final int WatchMoviesLayout=0x7f060018;
+        public static final int animated_movies_scroll_view=0x7f06000e;
+        public static final int background_image=0x7f060017;
+        public static final int category_label_1=0x7f06000c;
+        public static final int category_label_2=0x7f06000f;
+        public static final int category_label_3=0x7f060011;
+        public static final int category_label_4=0x7f060013;
+        public static final int cinemaSpinner=0x7f06000a;
+        public static final int details_label=0x7f060006;
+        public static final int developers_choice_scroll_view=0x7f060014;
+        public static final int editEmail=0x7f060009;
+        public static final int editName=0x7f060007;
+        public static final int editPhoneNum=0x7f060008;
+        public static final int horizontalScrollView=0x7f06000d;
+        public static final int horror_movies_scroll_view=0x7f060012;
         public static final int icon_button1=0x7f060001;
         public static final int icon_button2=0x7f060002;
         public static final int icon_button3=0x7f060003;
-        public static final int popular_movies_scroll_view=0x7f060008;
-        public static final int videoView=0x7f06000e;
-        public static final int watch_movie=0x7f060013;
-        public static final int webView=0x7f06000f;
+        public static final int popular_movies_scroll_view=0x7f060010;
+        public static final int runtimeSpinner=0x7f06000b;
+        public static final int videoView=0x7f060015;
+        public static final int watch_movie=0x7f060019;
+        public static final int webView=0x7f060016;
     }
     public static final class layout {
         public static final int activity2=0x7f030000;
         public static final int activity3=0x7f030001;
-        public static final int main=0x7f030002;
-        public static final int movie_url_view=0x7f030003;
-        public static final int movie_webview=0x7f030004;
-        public static final int preview=0x7f030005;
+        public static final int enter_details=0x7f030002;
+        public static final int main=0x7f030003;
+        public static final int movie_url_view=0x7f030004;
+        public static final int movie_webview=0x7f030005;
+        public static final int preview=0x7f030006;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

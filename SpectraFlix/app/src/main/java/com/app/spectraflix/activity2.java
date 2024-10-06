@@ -68,10 +68,10 @@ public class activity2 extends Activity
 		movie2.addCinema(cinema2);
 		
 		BookableMovie movie3 = new BookableMovie("Interstellar", R.drawable.interstellar_title, null);
-		movie2.addCinema(cinema1);
+		movie3.addCinema(cinema1);
 		
 		BookableMovie movie4 = new BookableMovie("RRR", R.drawable.rrr_title, null);
-		movie2.addCinema(cinema2);
+		movie4.addCinema(cinema2);
 		
 		DisplayMetrics displayMetrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
@@ -96,6 +96,19 @@ public class activity2 extends Activity
 		imageButton.setImageResource(movie.getResMovieTitlePath());
 		imageButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		imageButton.setBackground(null);
+		
+		final BookableMovie mov_final = movie;
+		imageButton.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				Intent intent = new Intent();
+				intent.putExtra("BookableMovie", mov_final);
+				intent.setClass(getApplicationContext(), EnterDetails.class);
+				startActivity(intent);
+			}
+		});
 		
 		parentLayout.addView(imageButton);
 	}

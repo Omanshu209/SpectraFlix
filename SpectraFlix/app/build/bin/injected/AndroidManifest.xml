@@ -57,6 +57,9 @@
 			android:name=".activity2"/>
 
 		<activity
+			android:name=".EnterDetails"/>
+
+		<activity
 			android:name=".activity3"/>
 
 	</application>
