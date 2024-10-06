@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.view.Gravity;
 import android.util.DisplayMetrics;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.content.Intent;
@@ -123,5 +124,42 @@ public class EnterDetails extends Activity
 			public void onNothingSelected(AdapterView<?> parent)
 			{}
 		});
+		
+		LinearLayout linearLayout = findViewById(R.id.LinearLayout);
+		
+		ImageButton nextButton = new ImageButton(this);
+		LinearLayout.LayoutParams nextButtonParams = new LinearLayout.LayoutParams(width / 6, height / 6);
+		nextButtonParams.gravity = Gravity.CENTER;
+		nextButton.setLayoutParams(nextButtonParams);
+		nextButton.setImageResource(R.drawable.next_screen);
+		nextButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
+		nextButton.setBackground(null);
+		
+		final BookableMovie mov_final = movie;
+		nextButton.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				EditText editName = findViewById(R.id.editName);
+				String enteredName = editName.getText().toString();
+				
+				EditText editPhoneNum = findViewById(R.id.editPhoneNum);
+				String enteredPhoneNum = editPhoneNum.getText().toString();
+				
+				EditText editEmail = findViewById(R.id.editEmail);
+				String enteredEmail = editEmail.getText().toString();
+				
+				final String[] data = {enteredName, enteredPhoneNum, enteredEmail, selectedCinema, selectedRuntime};
+				
+				Intent intent = new Intent();
+				intent.putExtra("Data", data);
+				intent.putExtra("BookableMovie", mov_final);
+				intent.setClass(getApplicationContext(), activity2.class);
+				startActivity(intent);
+			}
+		});
+		
+		linearLayout.addView(nextButton);
 	}
 }
