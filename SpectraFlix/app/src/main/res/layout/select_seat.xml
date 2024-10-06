@@ -7,37 +7,43 @@
 	android:background = "@drawable/bg"
 >
 
-	<LinearLayout 
-		xmlns:android = "http://schemas.android.com/apk/res/android"
-		android:id = "@+id/linearlayout"
+	<ScrollView
 		android:layout_width = "match_parent"
 		android:layout_height = "match_parent"
-		android:orientation = "vertical"
-		android:gravity = "center"
-		android:padding = "16dp"
-		android:background = "@drawable/bg"
-	>	
-	
-		<TextView
-			android:id = "@+id/seat_label"
+	>
+
+		<LinearLayout 
+			xmlns:android = "http://schemas.android.com/apk/res/android"
+			android:id = "@+id/linearlayout"
 			android:layout_width = "match_parent"
-			android:layout_height = "wrap_content"
-			android:text = "Select Seat"
-			android:textColor = "@android:color/white"
-			android:textSize = "30sp"
-			android:textStyle = "bold"
-			android:paddingStart = "16dp"
-			android:paddingEnd = "16dp"
-			android:paddingTop = "8dp"
-			android:paddingBottom = "8dp"
+			android:layout_height = "match_parent"
+			android:orientation = "vertical"
 			android:gravity = "center"
-			android:layout_marginBottom = "12dp"
-			android:letterSpacing = "0.05"
-			android:shadowColor = "@android:color/black"
-			android:shadowDx = "2"
-			android:shadowDy = "2"
-			android:shadowRadius = "3"
-		/>
+			android:padding = "16dp"
+			android:background = "@drawable/bg"
+		>	
 		
-	</LinearLayout>
+			<TextView
+				android:id = "@+id/seat_label"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:text = "Select Seat"
+				android:textColor = "@android:color/white"
+				android:textSize = "30sp"
+				android:textStyle = "bold"
+				android:paddingStart = "16dp"
+				android:paddingEnd = "16dp"
+				android:paddingTop = "8dp"
+				android:paddingBottom = "8dp"
+				android:gravity = "center"
+				android:layout_marginBottom = "12dp"
+				android:letterSpacing = "0.05"
+				android:shadowColor = "@android:color/black"
+				android:shadowDx = "2"
+				android:shadowDy = "2"
+				android:shadowRadius = "3"
+			/>
+			
+		</LinearLayout>
+	</ScrollView>
 </RelativeLayout>
