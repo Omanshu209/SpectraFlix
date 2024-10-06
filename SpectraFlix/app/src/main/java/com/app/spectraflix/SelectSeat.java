@@ -4,16 +4,18 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.widget.GridLayout;
+import android.view.Gravity;
 import android.widget.ImageButton;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 import java.util.List;
 import android.view.View;
 import android.util.DisplayMetrics;
-import android.widget.LinearLayout;
-import android.widget.Toast;
+import android.graphics.Typeface;
+import android.widget.TextView;
 import android.content.Context;
 import android.widget.ImageView;
 
@@ -32,14 +34,41 @@ public class SelectSeat extends Activity
 		if(getActionBar() != null)
 			getActionBar().hide();
 		
-		Intent intent = getIntent();
-		String[] data = intent.getStringArrayExtra("Data");
-		movie = (BookableMovie) intent.getSerializableExtra("BookableMovie");
+		Typeface customFont = Typeface.createFromAsset(getAssets(), "fonts/nasalization.ttf");
+		
+		TextView seatTextView = findViewById(R.id.seat_label);
+		seatTextView.setTypeface(customFont);
 		
 		DisplayMetrics displayMetrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 		int width = displayMetrics.widthPixels;
 		int height = displayMetrics.heightPixels;
+		
+		RelativeLayout relativeLayout = findViewById(R.id.RelativeLayout);
+		
+		ImageButton backButton = new ImageButton(this);
+		LinearLayout.LayoutParams backButtonParams = new LinearLayout.LayoutParams(width / 8, height / 12);
+		backButtonParams.gravity = Gravity.CENTER;
+		backButton.setLayoutParams(backButtonParams);
+		backButton.setImageResource(R.drawable.back);
+		backButton.setScaleType(ImageView.ScaleType.FIT_START);
+		backButton.setBackground(null);
+		backButton.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), activity2.class);
+				startActivity(intent);
+			}
+		});
+		
+		relativeLayout.addView(backButton);
+		
+		Intent intent = getIntent();
+		String[] data = intent.getStringArrayExtra("Data");
+		movie = (BookableMovie) intent.getSerializableExtra("BookableMovie");
 		
 		List<Cinema> cinemas = movie.getCinemas();
 		for(int i = 0 ; i < cinemas.size() ; i++)
@@ -121,5 +150,23 @@ public class SelectSeat extends Activity
 		}
 		
 		linearLayout.addView(gridLayout);
+		
+		ImageButton bookButton = new ImageButton(this);
+		LinearLayout.LayoutParams bookButtonParams = new LinearLayout.LayoutParams(width / 4, height / 6);
+		bookButtonParams.gravity = Gravity.CENTER;
+		bookButton.setLayoutParams(bookButtonParams);
+		bookButton.setImageResource(R.drawable.book_ticket);
+		bookButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
+		bookButton.setBackground(null);
+		bookButton.setOnClickListener(new View.OnClickListener()
+		{
+			@Override
+			public void onClick(View v)
+			{
+				Intent intent = new Intent();
+			}
+		});
+		
+		linearLayout.addView(bookButton);
 	}
 }
