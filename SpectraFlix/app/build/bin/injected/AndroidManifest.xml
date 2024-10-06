@@ -54,6 +54,9 @@
 			android:name=".SelectSeat"/>
 
 		<activity
+			android:name=".Ticket"/>
+
+		<activity
 			android:name=".MovieTrailerView"/>
 
 		<activity

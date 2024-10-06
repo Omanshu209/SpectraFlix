@@ -53,12 +53,13 @@ public final class R {
         public static final int the_conjuring_title=0x7f020027;
         public static final int the_nun_2=0x7f020028;
         public static final int the_nun_2_title=0x7f020029;
-        public static final int toy_story_3=0x7f02002a;
-        public static final int toy_story_3_title=0x7f02002b;
-        public static final int trailer=0x7f02002c;
-        public static final int watching=0x7f02002d;
-        public static final int zootopia=0x7f02002e;
-        public static final int zootopia_title=0x7f02002f;
+        public static final int ticket_bg=0x7f02002a;
+        public static final int toy_story_3=0x7f02002b;
+        public static final int toy_story_3_title=0x7f02002c;
+        public static final int trailer=0x7f02002d;
+        public static final int watching=0x7f02002e;
+        public static final int zootopia=0x7f02002f;
+        public static final int zootopia_title=0x7f020030;
     }
     public static final class id {
         public static final int ImageLinearLayout=0x7f060000;
@@ -86,6 +87,7 @@ public final class R {
         public static final int popular_movies_scroll_view=0x7f060010;
         public static final int runtimeSpinner=0x7f06000b;
         public static final int seat_label=0x7f06001b;
+        public static final int ticket_details=0x7f06001c;
         public static final int videoView=0x7f060015;
         public static final int watch_movie=0x7f060019;
         public static final int webView=0x7f060016;
@@ -99,6 +101,7 @@ public final class R {
         public static final int movie_webview=0x7f030005;
         public static final int preview=0x7f030006;
         public static final int select_seat=0x7f030007;
+        public static final int ticket=0x7f030008;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

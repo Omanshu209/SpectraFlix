@@ -158,12 +158,19 @@ public class SelectSeat extends Activity
 		bookButton.setImageResource(R.drawable.book_ticket);
 		bookButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		bookButton.setBackground(null);
+		
+		final String[] data_new = data;
 		bookButton.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
 			public void onClick(View v)
 			{
+				String[] new_data = {data_new[0], data_new[1], data_new[2], data_new[3], data_new[4], Character.toString((char)(65 + selected_row)) + selected_col};
+				
 				Intent intent = new Intent();
+				intent.putExtra("Data", new_data);
+				intent.setClass(getApplicationContext(), Ticket.class);
+				startActivity(intent);
 			}
 		});
 		
