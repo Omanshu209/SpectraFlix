@@ -64,6 +64,9 @@
 			android:name=".removeMovie"/>
 
 		<activity
+			android:name=".addBookableMovie"/>
+
+		<activity
 			android:name=".removeBookableMovie"/>
 
 		<activity

@@ -13,6 +13,10 @@ import android.util.DisplayMetrics;
 import android.graphics.Color;
 import android.app.ActionBar;
 import java.util.List;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import java.io.File;
 
 public class activity2 extends Activity 
 {
@@ -75,7 +79,24 @@ public class activity2 extends Activity
 		);
 		buttonParams.gravity = Gravity.CENTER;
 		imageButton.setLayoutParams(buttonParams);
-		imageButton.setImageResource(movie.getResMovieTitlePath());
+		
+		if(movie.getResMovieTitlePath() == -1)
+		{
+			try
+			{
+				File file = new File(movie.getMovieTitlePath());
+				Uri imageUri = Uri.fromFile(file);
+				Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+				imageButton.setImageBitmap(bitmap);
+			}
+			
+			catch(Exception e)
+			{}
+		}
+		
+		else
+			imageButton.setImageResource(movie.getResMovieTitlePath());
+		
 		imageButton.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		imageButton.setBackground(null);
 		

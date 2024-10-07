@@ -1,0 +1,204 @@
+<RelativeLayout
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	android:id = "@+id/RelativeLayout"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	android:padding = "16dp"
+	android:background = "@drawable/bg"
+>
+
+	<ScrollView
+		android:layout_width = "match_parent"
+		android:layout_height = "match_parent"
+	>
+
+		<LinearLayout 
+			xmlns:android = "http://schemas.android.com/apk/res/android"
+			android:id = "@+id/LinearLayout"
+			android:layout_width = "match_parent"
+			android:layout_height = "match_parent"
+			android:orientation = "vertical"
+			android:gravity = "center"
+			android:padding = "16dp"
+			android:background = "@drawable/bg"
+		>
+		
+			<LinearLayout 
+				xmlns:android = "http://schemas.android.com/apk/res/android"
+				android:id = "@+id/InnerLinearLayout1"
+				android:layout_width = "match_parent"
+				android:layout_height = "match_parent"
+				android:orientation = "vertical"
+				android:gravity = "center"
+				android:padding = "16dp"
+			>
+		
+				<TextView
+					android:id = "@+id/add_bookable_movie"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:text = "Add Bookable Movie"
+					android:textColor = "@android:color/white"
+					android:textSize = "30sp"
+					android:textStyle = "bold"
+					android:paddingStart = "16dp"
+					android:paddingEnd = "16dp"
+					android:paddingTop = "8dp"
+					android:paddingBottom = "8dp"
+					android:gravity = "center"
+					android:layout_marginBottom = "12dp"
+					android:letterSpacing = "0.05"
+					android:shadowColor = "@android:color/black"
+					android:shadowDx = "2"
+					android:shadowDy = "2"
+					android:shadowRadius = "3"
+				/>
+			
+				<EditText
+					android:id = "@+id/editMovieName"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:hint = "Enter the title"
+					android:textColor = "#000000"
+					android:singleLine = "true"
+					android:inputType = "text"
+					android:textSize = "18sp"
+					android:layout_marginBottom = "16dp"
+					android:padding = "10dp"
+				/>
+			
+				<EditText
+					android:id = "@+id/editMovieTitlePath"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:hint = "Enter the movie's title image path. Eg : /storage/emulated/0/img.jpg"
+					android:textColor = "#000000"
+					android:layout_marginBottom = "16dp"
+					android:inputType = "text"
+					android:textSize = "18sp"
+					android:singleLine = "true"
+					android:padding = "10dp"
+				/>
+			
+			</LinearLayout>
+			
+			<LinearLayout 
+				xmlns:android = "http://schemas.android.com/apk/res/android"
+				android:id = "@+id/InnerLinearLayout2"
+				android:layout_width = "match_parent"
+				android:layout_height = "match_parent"
+				android:orientation = "vertical"
+				android:gravity = "center"
+				android:padding = "16dp"
+			>
+		
+				<TextView
+					android:id = "@+id/add_cinema"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:text = "Add Cinema"
+					android:textColor = "@android:color/white"
+					android:textSize = "30sp"
+					android:textStyle = "bold"
+					android:paddingStart = "16dp"
+					android:paddingEnd = "16dp"
+					android:paddingTop = "8dp"
+					android:paddingBottom = "8dp"
+					android:gravity = "center"
+					android:layout_marginBottom = "12dp"
+					android:letterSpacing = "0.05"
+					android:shadowColor = "@android:color/black"
+					android:shadowDx = "2"
+					android:shadowDy = "2"
+					android:shadowRadius = "3"
+				/>
+			
+				<EditText
+					android:id = "@+id/editName"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:hint = "Enter the Cinema's name"
+					android:textColor = "#000000"
+					android:singleLine = "true"
+					android:inputType = "text"
+					android:textSize = "18sp"
+					android:layout_marginBottom = "16dp"
+					android:padding = "10dp"
+				/>
+			
+				<EditText
+					android:id = "@+id/editNumSeats"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:hint = "Enter the number of seats in the cinema"
+					android:textColor = "#000000"
+					android:layout_marginBottom = "16dp"
+					android:inputType = "phone"
+					android:textSize = "18sp"
+					android:singleLine = "true"
+					android:padding = "10dp"
+				/>
+			
+			</LinearLayout>
+			
+			<LinearLayout 
+				xmlns:android = "http://schemas.android.com/apk/res/android"
+				android:id = "@+id/InnerLinearLayout3"
+				android:layout_width = "match_parent"
+				android:layout_height = "match_parent"
+				android:orientation = "vertical"
+				android:gravity = "center"
+				android:padding = "16dp"
+			>
+			
+				<TextView
+					android:id = "@+id/add_runtime"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:text = "Add Runtime"
+					android:textColor = "@android:color/white"
+					android:textSize = "30sp"
+					android:textStyle = "bold"
+					android:paddingStart = "16dp"
+					android:paddingEnd = "16dp"
+					android:paddingTop = "8dp"
+					android:paddingBottom = "8dp"
+					android:gravity = "center"
+					android:layout_marginBottom = "12dp"
+					android:letterSpacing = "0.05"
+					android:shadowColor = "@android:color/black"
+					android:shadowDx = "2"
+					android:shadowDy = "2"
+					android:shadowRadius = "3"
+				/>
+			
+				<EditText
+					android:id = "@+id/editStartDateTime"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:hint = "When does it start? [Format : yyyy-MM-dd HH:mm]"
+					android:textColor = "#000000"
+					android:singleLine = "true"
+					android:inputType = "text"
+					android:textSize = "18sp"
+					android:layout_marginBottom = "16dp"
+					android:padding = "10dp"
+				/>
+			
+				<EditText
+					android:id = "@+id/editEndDateTime"
+					android:layout_width = "match_parent"
+					android:layout_height = "wrap_content"
+					android:hint = "When does it end? [Format : yyyy-MM-dd HH:mm]"
+					android:textColor = "#000000"
+					android:layout_marginBottom = "16dp"
+					android:inputType = "text"
+					android:textSize = "18sp"
+					android:singleLine = "true"
+					android:padding = "10dp"
+				/>
+				
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

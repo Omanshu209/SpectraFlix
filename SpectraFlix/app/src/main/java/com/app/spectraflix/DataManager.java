@@ -40,7 +40,7 @@ public class DataManager extends Application
 		cinema1.addRuntime("2024-10-15 11:15", "2024-10-15 14:00");
 		
 		Cinema cinema2 = new Cinema("Theater B", 36);
-		cinema2.addRuntime("2024-10-17 07:00", "2024-10-14 10:00");
+		cinema2.addRuntime("2024-10-17 07:00", "2024-10-17 10:00");
 		cinema2.addRuntime("2024-10-15 17:35", "2024-10-15 20:20");
 		
 		BookableMovie movie1 = new BookableMovie("Free Guy", R.drawable.free_guy_title,null);
@@ -89,5 +89,10 @@ public class DataManager extends Application
 		for(int i = 0 ; i < this.bookableMovies.size() ; i++)
 			if(this.bookableMovies.get(i).getMovieName().toLowerCase().equals(movieName.toLowerCase()))
 				this.bookableMovies.remove(i);
+	}
+	
+	public void addBookableMovie(BookableMovie mov)
+	{
+		this.bookableMovies.add(mov);
 	}
 }
