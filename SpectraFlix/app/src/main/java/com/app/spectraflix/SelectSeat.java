@@ -23,7 +23,8 @@ public class SelectSeat extends Activity
 {
 	private ImageButton[][] buttonArray;
 	private BookableMovie movie;
-	private int cinema_index, runtime_index, selected_row = -1, selected_col = -1;
+	private int movie_index, cinema_index, runtime_index, selected_row = -1, selected_col = -1;
+	private List<BookableMovie> bookableMovies;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -70,6 +71,12 @@ public class SelectSeat extends Activity
 		String[] data = intent.getStringArrayExtra("Data");
 		movie = (BookableMovie) intent.getSerializableExtra("BookableMovie");
 		
+		final DataManager dataManager = (DataManager) getApplication();
+		bookableMovies = dataManager.getBookableMovies();
+		for(int i = 0 ; i < bookableMovies.size() ; i++)
+			if(bookableMovies.get(i).getMovieName().equals(movie.getMovieName()))
+				movie_index = i;
+		
 		List<Cinema> cinemas = movie.getCinemas();
 		for(int i = 0 ; i < cinemas.size() ; i++)
 			if(cinemas.get(i).getName().equals(data[3]))
@@ -104,7 +111,7 @@ public class SelectSeat extends Activity
 			{
 				ImageButton imageButton = new ImageButton(this);
 				
-				if(movie.cinemas.get(cinema_index).runtimes.get(runtime_index).seats[row][col] == 0)
+				if(bookableMovies.get(movie_index).cinemas.get(cinema_index).runtimes.get(runtime_index).seats[row][col] == 0)
 					imageButton.setImageResource(R.drawable.chair_available);
 				else
 					imageButton.setImageResource(R.drawable.chair_booked);
@@ -127,20 +134,20 @@ public class SelectSeat extends Activity
 					@Override
 					public void onClick(View v)
 					{
-						if(movie.cinemas.get(cinema_index).runtimes.get(runtime_index).seats[currentRow][currentCol] == 1)
+						if(bookableMovies.get(movie_index).cinemas.get(cinema_index).runtimes.get(runtime_index).seats[currentRow][currentCol] == 1)
 							Toast.makeText(SelectSeat.this, "Seat already booked!", Toast.LENGTH_SHORT).show();
 						else
 						{
 							if(selected_row != -1)
 							{
 								buttonArray[selected_row][selected_col].setImageResource(R.drawable.chair_available);
-								movie.cinemas.get(cinema_index).runtimes.get(runtime_index).seats[selected_row][selected_col] = 0;
+								bookableMovies.get(movie_index).cinemas.get(cinema_index).runtimes.get(runtime_index).seats[selected_row][selected_col] = 0;
 							}
 							
 							buttonArray[currentRow][currentCol].setImageResource(R.drawable.chair_booked);
 							selected_row = currentRow;
 							selected_col = currentCol;
-							movie.cinemas.get(cinema_index).runtimes.get(runtime_index).seats[currentRow][currentCol] = 1;
+							bookableMovies.get(movie_index).cinemas.get(cinema_index).runtimes.get(runtime_index).seats[currentRow][currentCol] = 1;
 						}
 					}
 				});

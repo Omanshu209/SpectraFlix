@@ -12,6 +12,7 @@ import android.view.Gravity;
 import android.util.DisplayMetrics;
 import android.graphics.Color;
 import android.app.ActionBar;
+import java.util.List;
 
 public class activity2 extends Activity 
 {
@@ -52,33 +53,14 @@ public class activity2 extends Activity
 			}
 		});
 		
-		Cinema cinema1 = new Cinema("Theater A", 24);
-		cinema1.addRuntime("2024-10-14 11:15", "2024-10-14 14:00");
-		cinema1.addRuntime("2024-10-15 11:15", "2024-10-15 14:00");
-		
-		Cinema cinema2 = new Cinema("Theater B", 36);
-		cinema2.addRuntime("2024-10-17 07:00", "2024-10-14 10:00");
-		cinema2.addRuntime("2024-10-15 17:35", "2024-10-15 20:20");
-		
-		BookableMovie movie1 = new BookableMovie("Free Guy", R.drawable.free_guy_title,null);
-		movie1.addCinema(cinema1);
-		movie1.addCinema(cinema2);
-		
-		BookableMovie movie2 = new BookableMovie("Moana", R.drawable.moana_title, null);
-		movie2.addCinema(cinema2);
-		
-		BookableMovie movie3 = new BookableMovie("Interstellar", R.drawable.interstellar_title, null);
-		movie3.addCinema(cinema1);
-		
-		BookableMovie movie4 = new BookableMovie("RRR", R.drawable.rrr_title, null);
-		movie4.addCinema(cinema2);
+		DataManager dataManager = (DataManager) getApplication();
+		List<BookableMovie> bookableMovies = dataManager.getBookableMovies();
 		
 		DisplayMetrics displayMetrics = new DisplayMetrics();
 		getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
 		int height = displayMetrics.heightPixels;
 		
-		BookableMovie[] movies = {movie1, movie2, movie3, movie4};
-		for(BookableMovie movie : movies)
+		for(BookableMovie movie : bookableMovies)
 			addBookableMovie(movie, height);
     }
     

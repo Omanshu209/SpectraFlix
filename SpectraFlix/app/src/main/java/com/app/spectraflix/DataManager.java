@@ -7,6 +7,7 @@ import java.util.List;
 public class DataManager extends Application
 {
 	private List<Movie> movies;
+	public List<BookableMovie> bookableMovies;
 
 	@Override
 	public void onCreate()
@@ -31,6 +32,34 @@ public class DataManager extends Application
 		this.movies.add(new Movie("The Boy In The Striped Pyjamas", "", "", R.drawable.the_boy_in_the_striped_pyjamas, R.drawable.the_boy_in_the_striped_pyjamas_title, "uwysOfnX2Qg", "<iframe width = \"100%\" height=\"100%\" src = \"https://drive.google.com/file/d/17VcFkKk7mvDxVvqRE5E41KcA5Ziby9Ob/preview\" allow = \"autoplay\" sandbox = \"allow-same-origin allow-scripts\" allowfullscreen = \"true\" scrolling = \"no\"></iframe>", "", "", "Bruno, the son of a Nazi commander, meets Shmuel, a Jewish boy living in a concentration camp. Later, both the children become friends while being oblivious to the reality of the situation.", 4));
 		this.movies.add(new Movie("RRR", "", "", R.drawable.rrr, R.drawable.rrr_title, "GY4BgdUSpbE", "", "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4", "", "A fearless revolutionary and an officer in the British force, who once shared a deep bond, decide to join forces and chart out an inspirational path of freedom against the despotic rulers.", 4));
 		this.movies.add(new Movie("Ralph Breaks The Internet", "", "", R.drawable.ralph_breaks_the_internet, R.drawable.ralph_breaks_the_internet_title, "_BcYBFC6zfY", "", "", "", "On a quest to save the video game 'Sugar Rush' and to find a replacement, Ralph and his best friend Vanellope travel to the World Wide Web through a Wi-Fi router they find at the arcade.", 4));
+		
+		this.bookableMovies = new LinkedList<BookableMovie>();
+		
+		Cinema cinema1 = new Cinema("Theater A", 24);
+		cinema1.addRuntime("2024-10-14 11:15", "2024-10-14 14:00");
+		cinema1.addRuntime("2024-10-15 11:15", "2024-10-15 14:00");
+		
+		Cinema cinema2 = new Cinema("Theater B", 36);
+		cinema2.addRuntime("2024-10-17 07:00", "2024-10-14 10:00");
+		cinema2.addRuntime("2024-10-15 17:35", "2024-10-15 20:20");
+		
+		BookableMovie movie1 = new BookableMovie("Free Guy", R.drawable.free_guy_title,null);
+		movie1.addCinema(cinema1);
+		movie1.addCinema(cinema2);
+		
+		BookableMovie movie2 = new BookableMovie("Moana", R.drawable.moana_title, null);
+		movie2.addCinema(cinema2);
+		
+		BookableMovie movie3 = new BookableMovie("Interstellar", R.drawable.interstellar_title, null);
+		movie3.addCinema(cinema1);
+		
+		BookableMovie movie4 = new BookableMovie("RRR", R.drawable.rrr_title, null);
+		movie4.addCinema(cinema2);
+		
+		this.bookableMovies.add(movie1);
+		this.bookableMovies.add(movie2);
+		this.bookableMovies.add(movie3);
+		this.bookableMovies.add(movie4);
 	}
 
 	public List<Movie> getMovies()
@@ -48,5 +77,10 @@ public class DataManager extends Application
 		for(int i = 0 ; i < this.movies.size() ; i++)
 			if(this.movies.get(i).getTitle().toLowerCase().equals(title.toLowerCase()))
 				this.movies.remove(i);
+	}
+	
+	public List<BookableMovie> getBookableMovies()
+	{
+		return this.bookableMovies;
 	}
 }
