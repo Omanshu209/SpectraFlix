@@ -15,6 +15,10 @@ import android.view.Gravity;
 import android.graphics.Typeface;
 import android.widget.TextView;
 import android.util.DisplayMetrics;
+import android.net.Uri;
+import java.io.File;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.Manifest;
 import android.content.pm.PackageManager;
 
@@ -97,6 +101,8 @@ public class MainActivity extends Activity
 		Movie mov15 = new Movie("RRR", "", "", R.drawable.rrr, R.drawable.rrr_title, "GY4BgdUSpbE", "", "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4", "", "A fearless revolutionary and an officer in the British force, who once shared a deep bond, decide to join forces and chart out an inspirational path of freedom against the despotic rulers.");
 		Movie mov16 = new Movie("Ralph Breaks The Internet", "", "", R.drawable.ralph_breaks_the_internet, R.drawable.ralph_breaks_the_internet_title, "_BcYBFC6zfY", "", "", "", "On a quest to save the video game 'Sugar Rush' and to find a replacement, Ralph and his best friend Vanellope travel to the World Wide Web through a Wi-Fi router they find at the arcade.");
 		
+		//Movie mov17 = new Movie("Ralph Breaks The Internet", "/storage/emulated/0/Download/imageb1.jpg", "/storage/emulated/0/Download/imageb2.jpeg", -1, -1, "_BcYBFC6zfY", "", "", "", "On a quest to save the video game 'Sugar Rush' and to find a replacement, Ralph and his best friend Vanellope travel to the World Wide Web through a Wi-Fi router they find at the arcade.");
+		
 		streamingMovies categories = new streamingMovies();
 		
 		categories.addAnimatedMovie(mov1);
@@ -108,6 +114,7 @@ public class MainActivity extends Activity
 		categories.addPopularMovie(mov6);
 		categories.addPopularMovie(mov7);
 		categories.addPopularMovie(mov8);
+		//categories.addPopularMovie(mov17);
 		
 		categories.addHorrorMovie(mov9);
 		categories.addHorrorMovie(mov10);
@@ -147,7 +154,24 @@ public class MainActivity extends Activity
 		LinearLayout.LayoutParams movieTitleParams = new LinearLayout.LayoutParams(200, 150);
 		movieTitleParams.gravity = Gravity.CENTER;
 		movieTitleView.setLayoutParams(movieTitleParams);
-		movieTitleView.setImageResource(mov.getResTitleImagePath());
+		
+		if(mov.getResTitleImagePath() == -1)
+		{
+			try
+			{
+				File file = new File(mov.getTitleImagePath());
+				Uri imageUri = Uri.fromFile(file);
+				Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+				movieTitleView.setImageBitmap(bitmap);
+			}
+			
+			catch(Exception e)
+			{}
+		}
+		
+		else
+			movieTitleView.setImageResource(mov.getResTitleImagePath());
+		
 		movieTitleView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
 		ImageView moviePosterView = new ImageView(this);
@@ -155,7 +179,24 @@ public class MainActivity extends Activity
 			(int) Math.round(width * 0.75), 400);
 		moviePosterParams.gravity = Gravity.CENTER;
 		moviePosterView.setLayoutParams(moviePosterParams);
-		moviePosterView.setImageResource(mov.getResImagePath());
+		
+		if(mov.getResImagePath() == -1)
+		{
+			try
+			{
+				File file = new File(mov.getImagePath());
+				Uri imageUri = Uri.fromFile(file);
+				Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+				moviePosterView.setImageBitmap(bitmap);
+			}
+			
+			catch(Exception e)
+			{}
+		}
+		
+		else
+			moviePosterView.setImageResource(mov.getResImagePath());
+		
 		moviePosterView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		moviePosterView.setPadding((int) Math.round(width * 0.05), 0, (int) Math.round(width * 0.05), 0);
 

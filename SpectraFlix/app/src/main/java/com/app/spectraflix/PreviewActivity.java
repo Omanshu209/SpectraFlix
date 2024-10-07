@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.ImageView;
 import android.widget.ImageButton;
+import android.net.Uri;
+import java.io.File;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.Gravity;
 import android.content.Intent;
 import android.app.Activity;
@@ -76,11 +80,44 @@ public class PreviewActivity extends Activity
 		LinearLayout.LayoutParams movieTitleParams = new LinearLayout.LayoutParams(width / 3, height / 4);
 		movieTitleParams.gravity = Gravity.CENTER;
 		movieTitleView.setLayoutParams(movieTitleParams);
-		movieTitleView.setImageResource(mov.getResTitleImagePath());
+		
+		if(mov.getResTitleImagePath() == -1)
+		{
+			try
+			{
+				File file = new File(mov.getTitleImagePath());
+				Uri imageUri = Uri.fromFile(file);
+				Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+				movieTitleView.setImageBitmap(bitmap);
+			}
+			
+			catch(Exception e)
+			{}
+		}
+		
+		else
+			movieTitleView.setImageResource(mov.getResTitleImagePath());
+		
 		movieTitleView.setScaleType(ImageView.ScaleType.FIT_CENTER);
 		
 		ImageView bgImage = findViewById(R.id.background_image);
-		bgImage.setImageResource(mov.getResImagePath());
+		
+		if(mov.getResImagePath() == -1)
+		{
+			try
+			{
+				File file = new File(mov.getImagePath());
+				Uri imageUri = Uri.fromFile(file);
+				Bitmap bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+				bgImage.setImageBitmap(bitmap);
+			}
+			
+			catch(Exception e)
+			{}
+		}
+		
+		else
+			bgImage.setImageResource(mov.getResImagePath());
 
         ScrollView scrollView = new ScrollView(this);
 
