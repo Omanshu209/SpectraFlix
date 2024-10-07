@@ -83,4 +83,11 @@ public class DataManager extends Application
 	{
 		return this.bookableMovies;
 	}
+	
+	public void removeBookableMovie(String movieName)
+	{
+		for(int i = 0 ; i < this.bookableMovies.size() ; i++)
+			if(this.bookableMovies.get(i).getMovieName().toLowerCase().equals(movieName.toLowerCase()))
+				this.bookableMovies.remove(i);
+	}
 }

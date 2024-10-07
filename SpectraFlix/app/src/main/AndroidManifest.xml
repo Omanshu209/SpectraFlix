@@ -43,6 +43,7 @@
 		<activity android:name = ".Ticket" />
 		<activity android:name = ".addMovie" />
 		<activity android:name = ".removeMovie" />
+		<activity android:name = ".removeBookableMovie" />
 		<activity android:name = ".MovieTrailerView" />
 		<activity android:name = ".activity2" />
 		<activity android:name = ".EnterDetails" />
