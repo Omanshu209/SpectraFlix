@@ -16,6 +16,7 @@
 
     <application
     	android:name = ".DataManager"
+    	android:requestLegacyExternalStorage = "true"
         android:allowBackup = "true"
         android:icon = "@drawable/ic_launcher"
         android:label = "@string/app_name"
