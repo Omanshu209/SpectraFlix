@@ -41,6 +41,7 @@
 		<activity android:name = ".MovieLocalView" />
 		<activity android:name = ".SelectSeat" />
 		<activity android:name = ".Ticket" />
+		<activity android:name = ".addMovie" />
 		<activity android:name = ".MovieTrailerView" />
 		<activity android:name = ".activity2" />
 		<activity android:name = ".EnterDetails" />

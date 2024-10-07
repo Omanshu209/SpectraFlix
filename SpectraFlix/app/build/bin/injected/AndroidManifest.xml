@@ -58,6 +58,9 @@
 			android:name=".Ticket"/>
 
 		<activity
+			android:name=".addMovie"/>
+
+		<activity
 			android:name=".MovieTrailerView"/>
 
 		<activity

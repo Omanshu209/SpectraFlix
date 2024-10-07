@@ -1,0 +1,161 @@
+<RelativeLayout
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	android:id = "@+id/RelativeLayout"
+	android:layout_width = "match_parent"
+	android:layout_height = "match_parent"
+	android:padding = "16dp"
+	android:background = "@drawable/bg"
+>
+
+	<ScrollView
+		android:layout_width = "match_parent"
+		android:layout_height = "match_parent"
+	>
+
+		<LinearLayout 
+			xmlns:android = "http://schemas.android.com/apk/res/android"
+			android:id = "@+id/LinearLayout"
+			android:layout_width = "match_parent"
+			android:layout_height = "match_parent"
+			android:orientation = "vertical"
+			android:gravity = "center"
+			android:padding = "16dp"
+			android:background = "@drawable/bg"
+		>	
+		
+			<TextView
+				android:id = "@+id/add_movie"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:text = "Add Movie"
+				android:textColor = "@android:color/white"
+				android:textSize = "30sp"
+				android:textStyle = "bold"
+				android:paddingStart = "16dp"
+				android:paddingEnd = "16dp"
+				android:paddingTop = "8dp"
+				android:paddingBottom = "8dp"
+				android:gravity = "center"
+				android:layout_marginBottom = "12dp"
+				android:letterSpacing = "0.05"
+				android:shadowColor = "@android:color/black"
+				android:shadowDx = "2"
+				android:shadowDy = "2"
+				android:shadowRadius = "3"
+			/>
+		
+			<EditText
+				android:id = "@+id/editTitle"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:hint = "Enter the title"
+				android:textColor = "#000000"
+				android:singleLine = "true"
+				android:inputType = "text"
+				android:textSize = "18sp"
+				android:layout_marginBottom = "16dp"
+				android:padding = "10dp"
+			/>
+		
+			<EditText
+				android:id = "@+id/editImagePath"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:hint = "Enter the movie's poster path. Eg : /storage/emulated/0/img.jpg"
+				android:textColor = "#000000"
+				android:layout_marginBottom = "16dp"
+				android:inputType = "text"
+				android:textSize = "18sp"
+				android:singleLine = "true"
+				android:padding = "10dp"
+			/>
+		
+			<EditText
+				android:id = "@+id/editTitleImagePath"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:hint = "Enter the movie's title image path. Eg : /storage/emulated/0/img.jpg"
+				android:singleLine = "true"
+				android:layout_marginBottom = "16dp"
+				android:textColor = "#000000"
+				android:inputType = "text"
+				android:textSize = "18sp"
+				android:padding = "10dp"
+			/>
+			
+			<EditText
+				android:id = "@+id/editTrailerId"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:hint = "Enter the movie's trailer Id (youtube). Eg : LKFuXETZUsI [OPTIONAL]"
+				android:singleLine = "true"
+				android:layout_marginBottom = "16dp"
+				android:textColor = "#000000"
+				android:inputType = "text"
+				android:textSize = "18sp"
+				android:padding = "10dp"
+			/>
+			
+			<EditText
+				android:id = "@+id/editMovieEmbedCode"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:hint = "Enter the movie's embed code (HTML). [OPTIONAL]"
+				android:singleLine = "true"
+				android:layout_marginBottom = "16dp"
+				android:textColor = "#000000"
+				android:inputType = "text"
+				android:textSize = "18sp"
+				android:padding = "10dp"
+			/>
+			
+			<EditText
+				android:id = "@+id/editMovieURL"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:hint = "Enter the movie's URL. [OPTIONAL]"
+				android:singleLine = "true"
+				android:layout_marginBottom = "16dp"
+				android:textColor = "#000000"
+				android:inputType = "text"
+				android:textSize = "18sp"
+				android:padding = "10dp"
+			/>
+			
+			<EditText
+				android:id = "@+id/editMovieLocalPath"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:hint = "Enter the movie's local path. Eg : /storage/emulated/0/vid.mp4 [OPTIONAL]"
+				android:singleLine = "true"
+				android:layout_marginBottom = "16dp"
+				android:textColor = "#000000"
+				android:inputType = "text"
+				android:textSize = "18sp"
+				android:padding = "10dp"
+			/>
+			
+			<EditText
+				android:id = "@+id/editMovieDescription"
+				android:layout_width = "match_parent"
+				android:layout_height = "wrap_content"
+				android:hint = "Enter the movie's description [OPTIONAL]"
+				android:singleLine = "true"
+				android:layout_marginBottom = "16dp"
+				android:textColor = "#000000"
+				android:inputType = "text"
+				android:textSize = "18sp"
+				android:padding = "10dp"
+			/>
+		
+			<Spinner
+				android:id = "@+id/movieCategory"
+				android:layout_width = "wrap_content"
+				android:layout_marginBottom = "16dp"
+				android:layout_height = "wrap_content"
+				android:gravity = "center" 
+			/>
+		
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>
