@@ -5,9 +5,9 @@ import java.io.Serializable;
 public class Movie implements Serializable
 {
 	private String title, imagePath, titleImagePath, trailerId, movieEmbedCode, movieURL, localPath, description;
-	private int resImagePath, resTitleImagePath;
+	private int resImagePath, resTitleImagePath, category;
 	
-	public Movie(String title, String imagePath, String titleImagePath, int resImagePath, int resTitleImagePath, String trailerId, String movieEmbedCode, String movieURL, String localPath, String description)
+	public Movie(String title, String imagePath, String titleImagePath, int resImagePath, int resTitleImagePath, String trailerId, String movieEmbedCode, String movieURL, String localPath, String description, int category)
 	{
 		this.title = title;
 		this.imagePath = imagePath;
@@ -19,11 +19,17 @@ public class Movie implements Serializable
 		this.movieEmbedCode = movieEmbedCode;
 		this.movieURL = movieURL;
 		this.localPath = localPath;
+		this.category = category;
 	}
 	
 	public String getTitle()
 	{
 		return this.title;
+	}
+	
+	public int getCategory()
+	{
+		return this.category;
 	}
 	
 	public String getImagePath()
@@ -109,6 +115,11 @@ public class Movie implements Serializable
 	public void setMovieEmbedCode(String movieEmbedCode)
 	{
 		this.movieEmbedCode = movieEmbedCode;
+	}
+	
+	public void setCategory(int category)
+	{
+		this.category = category;
 	}
 	
 	public void setMovieURL(String movieURL)
