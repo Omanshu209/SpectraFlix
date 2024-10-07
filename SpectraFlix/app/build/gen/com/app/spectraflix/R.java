@@ -96,12 +96,13 @@ public final class R {
         public static final int icon_button1=0x7f060001;
         public static final int icon_button2=0x7f060002;
         public static final int icon_button3=0x7f060003;
-        public static final int linearlayout=0x7f060026;
+        public static final int linearlayout=0x7f060027;
         public static final int movieCategory=0x7f060011;
         public static final int popular_movies_scroll_view=0x7f06001c;
+        public static final int remove_movie=0x7f060026;
         public static final int runtimeSpinner=0x7f060017;
-        public static final int seat_label=0x7f060027;
-        public static final int ticket_details=0x7f060028;
+        public static final int seat_label=0x7f060028;
+        public static final int ticket_details=0x7f060029;
         public static final int videoView=0x7f060021;
         public static final int watch_movie=0x7f060025;
         public static final int webView=0x7f060022;
@@ -115,8 +116,9 @@ public final class R {
         public static final int movie_url_view=0x7f030005;
         public static final int movie_webview=0x7f030006;
         public static final int preview=0x7f030007;
-        public static final int select_seat=0x7f030008;
-        public static final int ticket=0x7f030009;
+        public static final int remove_movie=0x7f030008;
+        public static final int select_seat=0x7f030009;
+        public static final int ticket=0x7f03000a;
     }
     public static final class string {
         public static final int app_name=0x7f040000;

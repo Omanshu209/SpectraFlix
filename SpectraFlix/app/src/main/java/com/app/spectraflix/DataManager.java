@@ -31,8 +31,6 @@ public class DataManager extends Application
 		this.movies.add(new Movie("The Boy In The Striped Pyjamas", "", "", R.drawable.the_boy_in_the_striped_pyjamas, R.drawable.the_boy_in_the_striped_pyjamas_title, "uwysOfnX2Qg", "<iframe width = \"100%\" height=\"100%\" src = \"https://drive.google.com/file/d/17VcFkKk7mvDxVvqRE5E41KcA5Ziby9Ob/preview\" allow = \"autoplay\" sandbox = \"allow-same-origin allow-scripts\" allowfullscreen = \"true\" scrolling = \"no\"></iframe>", "", "", "Bruno, the son of a Nazi commander, meets Shmuel, a Jewish boy living in a concentration camp. Later, both the children become friends while being oblivious to the reality of the situation.", 4));
 		this.movies.add(new Movie("RRR", "", "", R.drawable.rrr, R.drawable.rrr_title, "GY4BgdUSpbE", "", "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4", "", "A fearless revolutionary and an officer in the British force, who once shared a deep bond, decide to join forces and chart out an inspirational path of freedom against the despotic rulers.", 4));
 		this.movies.add(new Movie("Ralph Breaks The Internet", "", "", R.drawable.ralph_breaks_the_internet, R.drawable.ralph_breaks_the_internet_title, "_BcYBFC6zfY", "", "", "", "On a quest to save the video game 'Sugar Rush' and to find a replacement, Ralph and his best friend Vanellope travel to the World Wide Web through a Wi-Fi router they find at the arcade.", 4));
-		
-		this.movies.add(new Movie("Ralph Breaks The Internet", "/storage/emulated/0/Download/imageb1.jpg", "/storage/emulated/0/Download/imageb2.jpeg", -1, -1, "_BcYBFC6zfY", "", "", "", "On a quest to save the video game 'Sugar Rush' and to find a replacement, Ralph and his best friend Vanellope travel to the World Wide Web through a Wi-Fi router they find at the arcade.", 2));  
 	}
 
 	public List<Movie> getMovies()
@@ -45,8 +43,10 @@ public class DataManager extends Application
 		this.movies.add(mov);
 	}
 
-	public void removeMovie(Movie mov)
+	public void removeMovie(String title)
 	{
-		this.movies.remove(mov);
+		for(int i = 0 ; i < this.movies.size() ; i++)
+			if(this.movies.get(i).getTitle().toLowerCase().equals(title.toLowerCase()))
+				this.movies.remove(i);
 	}
 }

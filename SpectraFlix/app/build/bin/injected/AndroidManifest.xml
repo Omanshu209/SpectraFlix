@@ -61,6 +61,9 @@
 			android:name=".addMovie"/>
 
 		<activity
+			android:name=".removeMovie"/>
+
+		<activity
 			android:name=".MovieTrailerView"/>
 
 		<activity

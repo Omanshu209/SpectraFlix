@@ -95,9 +95,9 @@ public class activity3 extends Activity
 			@Override
 			public void onClick(View v)
 			{
-				//Intent intent = new Intent();
-				//intent.setClass(getApplicationContext(), activity2.class);
-				//startActivity(intent);
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), removeMovie.class);
+				startActivity(intent);
 			}
 		});
 		
