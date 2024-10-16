@@ -1,1 +1,2 @@
-# Movies-App
+# SpectraFlix
+[DETAILS](SpectraFlix.pdf)
